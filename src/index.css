@@ -1,6 +1,16 @@
+@import url("./styles/components/layout/menu-button.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --bg-color: #262625;
+  --text-color: #f2f2f2;
+  --primary-element: #4fe1c4;
+  --primary-element-dark: #08a888;
+  --primary-element-contrast: #ed944d;
+}
 
 html,
 body,
@@ -10,10 +20,6 @@ body,
   height: 100%;
   width: 100%;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-}
-
-:root {
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }

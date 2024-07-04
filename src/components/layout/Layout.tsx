@@ -3,9 +3,11 @@ import { Outlet } from "react-router-dom";
 
 export default function Layout() {
   return (
-    <div>
+    <div className="h-full w-full grid grid-cols-12">
       <SideBar />
-      <Outlet />
+      <main className="col-span-10">
+        <Outlet />
+      </main>
     </div>
   );
 }

@@ -1,0 +1,7 @@
+.font-logo {
+  /*Font*/
+  font-weight: bolder;
+  color: var(--text-color);
+  text-shadow: 4.5px 4.5px var(--primary-element-dark);
+  -webkit-text-stroke: 1px var(--bg-color);
+}

@@ -14,6 +14,7 @@
     linear-gradient(135deg, #171717 45%, transparent 5%);
   background-size: 250%;
   transition: 0.5s ease-out;
+  font-family: var(--font-impact);
 }
 
 .menu-button:hover {

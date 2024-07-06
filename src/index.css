@@ -1,4 +1,6 @@
 @import url("./styles/components/layout/menu-button.css");
+/* @import url("http://fonts.cdnfonts.com/css/chalk"); Chalk font" */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap"); /*Impact font*/
 
 @tailwind base;
 @tailwind components;
@@ -10,6 +12,8 @@
   --primary-element: #4fe1c4;
   --primary-element-dark: #08a888;
   --primary-element-contrast: #ed944d;
+  /* --font-chalk: "Chalk", sans-serif; */
+  --font-impact: "Impact", "Raleway", sans-serif;
 }
 
 html,

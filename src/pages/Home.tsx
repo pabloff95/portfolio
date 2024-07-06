@@ -1,16 +1,16 @@
 export default function Home() {
   return (
     <>
-      <section className="h-[100vh] w-full">
+      <section className="h-[100vh] w-full overflow-hidden">
         <div className="flex h-full w-full justify-center items-center px-4">
-          <div className="w-[40%]">
+          <div className="w-[40%] hidden-animation hidden-animation-left">
             <img
               className="rounded-3xl m-auto"
               src="./public/images/profile.png"
               alt="Profile picture"
             />
           </div>
-          <div className="font-impact text-center w-[60%] px-2 flex flex-col gap-8">
+          <div className="font-impact text-center w-[60%] px-2 flex flex-col gap-8 hidden-animation hidden-animation-right">
             <p className="text-5xl leading-snug">
               Welcome! <br />I am Pablo, a{" "}
               <span className="text-primary">web developer</span> especiallized

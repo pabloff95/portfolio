@@ -53,4 +53,25 @@ body,
   color: var(--bg-color);
   background: var(--primary-element);
 }
-/* ------------------------ */
+/* -------------------------- */
+
+/* ---- SCROLL ANIMATION ---- */
+.hidde-animation {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+}
+.hidden-animation-left {
+  transform: translateX(-100%);
+  transition: transform 1s;
+}
+.hidden-animation-right {
+  transform: translateX(100%);
+  transition: transform 1s;
+}
+.show-animation {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+/* -------------------------- */

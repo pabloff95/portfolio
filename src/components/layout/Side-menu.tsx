@@ -3,10 +3,23 @@ import FaIcon from "../basic-components/Fa-icon";
 import ExternalLink from "../basic-components/External-link";
 import Logo from "../basic-components/Logo";
 
-export default function SideBar() {
+interface SideMenuProps {
+  setDisplayMenu: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const SideMenu: React.FC<SideMenuProps> = ({ setDisplayMenu }) => {
   return (
     <aside className="h-[100vh] col-span-2 bg-black grid grid-rows-6">
       <section className="row-span-1">
+        <section className="h-5 w-full p-2 flex justify-start gap-4">
+          <button
+            type="button"
+            className="h-full"
+            onClick={() => setDisplayMenu(false)}
+          >
+            <FaIcon icon="fa-compress" />
+          </button>
+        </section>
         <div className="h-full font-impact text-2xl flex flex-col justify-center text-center">
           <Logo />
           <p>Web developer</p>
@@ -34,4 +47,6 @@ export default function SideBar() {
       </section>
     </aside>
   );
-}
+};
+
+export default SideMenu;

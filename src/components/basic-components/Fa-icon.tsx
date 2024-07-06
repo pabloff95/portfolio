@@ -5,6 +5,7 @@ import {
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { faExpand, faCompress } from "@fortawesome/free-solid-svg-icons";
 import { library, IconProp } from "@fortawesome/fontawesome-svg-core";
 
 interface FaIconProps {
@@ -13,7 +14,7 @@ interface FaIconProps {
   iconColor?: string;
 }
 
-const iconList: IconDefinition[] = [faGithub, faLinkedin];
+const iconList: IconDefinition[] = [faGithub, faLinkedin, faExpand, faCompress];
 
 library.add(...iconList);
 

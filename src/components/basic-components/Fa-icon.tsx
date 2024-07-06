@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   IconDefinition,
@@ -12,6 +12,7 @@ interface FaIconProps {
   icon: string;
   className?: string;
   iconColor?: string;
+  changeOnHover?: boolean;
 }
 
 const iconList: IconDefinition[] = [faGithub, faLinkedin, faExpand, faCompress];
@@ -22,12 +23,20 @@ const FaIcon: React.FC<FaIconProps> = ({
   icon,
   className,
   iconColor = "var(--text-color)",
+  changeOnHover = true,
 }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const hoverColor: string = "var(--primary-element-contrast)";
+
   return (
     <FontAwesomeIcon
       icon={icon as IconProp}
       className={className}
-      style={{ color: iconColor }}
+      style={{ color: isHovered ? hoverColor : iconColor }}
+      onMouseEnter={(): void => {
+        if (changeOnHover) setIsHovered(true);
+      }}
+      onMouseLeave={(): void => setIsHovered(false)}
     />
   );
 };

@@ -1,4 +1,6 @@
 import MenuButton from "./Menu-button";
+import FaIcon from "../basic-components/Fa-icon";
+import ExternalLink from "../basic-components/External-link";
 
 export default function SideBar() {
   return (
@@ -10,7 +12,20 @@ export default function SideBar() {
         <MenuButton to="/about" text="ABOUT" />
         <MenuButton to="/contact" text="CONTACT" />
       </section>
-      <section className="row-span-1"></section>
+      <section className="row-span-1">
+        <div className="w-full h-full flex justify-center items-center gap-8">
+          <div className="h-1/4">
+            <ExternalLink url="https://github.com/pabloff95">
+              <FaIcon icon="fa-brands fa-github" className="h-full" />
+            </ExternalLink>
+          </div>
+          <div className="h-1/4">
+            <ExternalLink url="https://linkedin.com/in/pablo-fdezfdez">
+              <FaIcon icon="fa-brands fa-linkedin" className="h-full" />
+            </ExternalLink>
+          </div>
+        </div>
+      </section>
     </aside>
   );
 }

@@ -4,4 +4,9 @@
   color: var(--text-color);
   text-shadow: 4.5px 4.5px var(--primary-element-dark);
   -webkit-text-stroke: 1px var(--bg-color);
+  transition: text-shadow 0.2s ease;
+}
+
+.font-logo:hover {
+  text-shadow: 4.5px 4.5px var(--primary-element-contrast);
 }

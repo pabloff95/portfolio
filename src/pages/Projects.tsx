@@ -1,7 +1,9 @@
+import Section from "../components/basic-components/Section";
+
 export default function Projects() {
   return (
     <>
-      <h1>Projects</h1>
+      <Section title="Projects"></Section>
     </>
   );
 }

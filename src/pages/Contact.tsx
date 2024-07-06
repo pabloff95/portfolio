@@ -1,7 +1,9 @@
+import Section from "../components/basic-components/Section";
+
 export default function Contact() {
   return (
     <>
-      <h1>Contact</h1>
+      <Section title="Concact"></Section>
     </>
   );
 }

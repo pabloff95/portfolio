@@ -1,7 +1,9 @@
+import Section from "../components/basic-components/Section";
+
 export default function About() {
   return (
     <>
-      <h1>About</h1>
+      <Section title="About me"></Section>
     </>
   );
 }

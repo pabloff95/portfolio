@@ -28,3 +28,29 @@ body,
   background-color: var(--bg-color);
   color: var(--text-color);
 }
+
+/* ---- SCROLLBAR ---- */
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-element);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-element-contrast);
+}
+/* ------------------------ */
+
+/* ---- TEXT SELECTION ---- */
+::selection {
+  color: var(--bg-color);
+  background: var(--primary-element);
+}
+::-moz-selection {
+  /*firefox*/
+  color: var(--bg-color);
+  background: var(--primary-element);
+}
+/* ------------------------ */

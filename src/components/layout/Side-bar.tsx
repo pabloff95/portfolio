@@ -5,7 +5,7 @@ import Logo from "../basic-components/Logo";
 
 export default function SideBar() {
   return (
-    <aside className="h-full col-span-2 bg-black grid grid-rows-6">
+    <aside className="h-[100vh] col-span-2 bg-black grid grid-rows-6">
       <section className="row-span-1">
         <div className="h-full font-impact text-2xl flex flex-col justify-center text-center">
           <Logo />

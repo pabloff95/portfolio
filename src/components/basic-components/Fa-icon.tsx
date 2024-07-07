@@ -5,7 +5,15 @@ import {
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { faExpand, faCompress } from "@fortawesome/free-solid-svg-icons";
+import {
+  faExpand,
+  faCompress,
+  faPeopleGroup,
+  faGears,
+  faClock,
+  faLightbulb,
+  faRotate,
+} from "@fortawesome/free-solid-svg-icons";
 import { library, IconProp } from "@fortawesome/fontawesome-svg-core";
 
 interface FaIconProps {
@@ -15,7 +23,17 @@ interface FaIconProps {
   changeOnHover?: boolean;
 }
 
-const iconList: IconDefinition[] = [faGithub, faLinkedin, faExpand, faCompress];
+const iconList: IconDefinition[] = [
+  faGithub,
+  faLinkedin,
+  faExpand,
+  faCompress,
+  faPeopleGroup,
+  faGears,
+  faClock,
+  faLightbulb,
+  faRotate,
+];
 
 library.add(...iconList);
 

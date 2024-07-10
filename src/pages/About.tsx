@@ -1,5 +1,6 @@
 import Section from "../components/basic-components/Section";
-import SoftSkill from "../components/pages/about/soft-skill";
+import SoftSkill from "../components/pages/about/Soft-skill";
+import BackgroundCard from "../components/pages/about/Background-card";
 
 export default function About() {
   return (
@@ -9,9 +10,9 @@ export default function About() {
           I grew up in the north of Spain, in Santander. But I have had the
           opportunity to live in various locations such as Barcelona (Spain),
           Gerona (Spain), Looe (UK), Ghent (Belgium) and Salem (Germany). Now, I
-          am based in Neuburg an der Donau (Germany). Each of these places has
-          allowed me to learn from diverse cultures and meet incredible people.
-          Because of it I can speak English, Spanish, and German
+          am based in Nürnberg (Germany). Each of these places has allowed me to
+          learn from diverse cultures and meet incredible people. Because of it
+          I can speak English, Spanish, and German
         </p>
         <p className="paragraph">
           During my undergraduate studies, I commuted daily approximately four
@@ -24,7 +25,7 @@ export default function About() {
         <p className="paragraph">
           In addition to my studies, I am also passionate about new experiences
           and challenges. This led me to participate in an Erasmus volunteer
-          project,where I lived in a caravan for a year in the UK. I believe
+          project, where I lived in a caravan for a year in the UK. I believe
           volunteering is an excellent way to grow as an individual and make a
           positive impact in the world.
         </p>
@@ -34,7 +35,31 @@ export default function About() {
         </p>
       </Section>
       <Section title="Work experience"></Section>
-      <Section title="Academic background"></Section>
+      <Section title="Academic background">
+        <div className="my-5 mx-auto flex flex-col gap-6 w-2/3">
+          <BackgroundCard
+            from="2020"
+            to="2022"
+            title="Web Applications Development"
+            degreeType="Higher education degree"
+            place="Ilerna (Spain)"
+          ></BackgroundCard>
+          <BackgroundCard
+            from="2019"
+            to="2020"
+            title="Terrestrial Ecology & Biodiversity Management"
+            degreeType="Master of Science degree"
+            place="Autonomous University of Barcelona (Spain)"
+          ></BackgroundCard>
+          <BackgroundCard
+            from="2014"
+            to="2018"
+            title="Biology"
+            degreeType="Bachelor of Science degree"
+            place="University of Girona (Spain)"
+          ></BackgroundCard>
+        </div>
+      </Section>
       <Section title="Soft skills">
         <p className="paragraph">
           I place a very high value on the soft skills I have developed

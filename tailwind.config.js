@@ -12,6 +12,7 @@ export default {
         primary: "var(--primary-element)",
         "primary-dark": "var(--primary-element-dark)",
         "primary-contrast": "var(--primary-element-contrast)",
+        "dark-bg": "var(--bg-color-dark)",
       },
     },
   },

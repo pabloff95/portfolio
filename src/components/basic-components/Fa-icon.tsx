@@ -13,6 +13,8 @@ import {
   faClock,
   faLightbulb,
   faRotate,
+  faMagnifyingGlassPlus,
+  faMagnifyingGlassMinus,
 } from "@fortawesome/free-solid-svg-icons";
 import { library, IconProp } from "@fortawesome/fontawesome-svg-core";
 
@@ -33,6 +35,8 @@ const iconList: IconDefinition[] = [
   faClock,
   faLightbulb,
   faRotate,
+  faMagnifyingGlassPlus,
+  faMagnifyingGlassMinus,
 ];
 
 library.add(...iconList);

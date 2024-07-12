@@ -5,6 +5,7 @@ interface ExternalLinkProps {
   openNewPage?: boolean;
   className?: string;
   children?: any;
+  showLinkClasses?: boolean;
 }
 
 const ExternalLink: React.FC<ExternalLinkProps> = ({
@@ -12,12 +13,15 @@ const ExternalLink: React.FC<ExternalLinkProps> = ({
   openNewPage = true,
   className,
   children,
+  showLinkClasses = false,
 }) => {
+  const linkClasses = "underline text-primary-dark hover:text-primary";
+
   return (
     <a
       href={url}
       target={openNewPage ? "_blank" : ""}
-      className={`${className}`}
+      className={`${className} ${showLinkClasses ? linkClasses : ""}`}
     >
       {children}
     </a>

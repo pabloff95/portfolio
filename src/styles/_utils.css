@@ -12,9 +12,23 @@
   box-shadow: 0px 3px 8px 1px var(--primary-element-contrast);
 }
 
+/* Transform element box shadow on sibling/child hover*/
 .shadow-contrast-on-hover-child:has(
     > div > section > div > .hover\:bg-primary-contrast:hover
   ),
-.shadow-contrast-on-hover-child:has(> div > .hover\:bg-primary-contrast:hover) {
+.shadow-contrast-on-hover-child:has(> div > .hover\:bg-primary-contrast:hover),
+.shadow-contrast-on-hover-child:has(
+    > div > div > .hover\:bg-primary-contrast:hover
+  ),
+.shadow-contrast-on-hover-child:has(
+    > div > button > .hover\:bg-primary-contrast:hover
+  ) {
   box-shadow: 0px 3px 8px 1px var(--primary-element-contrast);
+}
+
+/* Transform element text color on sibling/child hover*/
+button:has(> img.hover\:bg-primary-contrast):hover
+  + .text-contrast-on-sibling-hover,
+.text-contrast-on-sibling-hover:has(~ button:hover) {
+  color: var(--primary-element-contrast);
 }

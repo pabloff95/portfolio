@@ -69,7 +69,7 @@ export default function Projects() {
   return (
     <>
       <Section title="Projects">
-        <div className="w-full my-4 flex flex-wrap justify-evenly gap-y-8">
+        <div className="w-full my-4 flex flex-wrap justify-center gap-y-8">
           {projectsData.map((project: ProjectCardProps, index) => (
             <ProjectCard {...project} key={`project-${index}`} />
           ))}

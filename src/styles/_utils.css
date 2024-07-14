@@ -21,7 +21,7 @@
     > div > div > .hover\:bg-primary-contrast:hover
   ),
 .shadow-contrast-on-hover-child:has(
-    > div > button > .hover\:bg-primary-contrast:hover
+    > div > div > button > .hover\:bg-primary-contrast:hover
   ) {
   box-shadow: 0px 3px 8px 1px var(--primary-element-contrast);
 }

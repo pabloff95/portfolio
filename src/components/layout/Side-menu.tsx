@@ -11,7 +11,7 @@ const SideMenu: React.FC<SideMenuProps> = ({ setDisplayMenu }) => {
   return (
     <aside className="h-[100vh] col-span-2 bg-dark-bg grid grid-rows-6">
       <section className="row-span-1">
-        <section className="h-5 w-full p-2 flex justify-start gap-4">
+        <section className="h-fit w-full px-1 flex justify-start gap-4">
           <button
             type="button"
             className="h-full"

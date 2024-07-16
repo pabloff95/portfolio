@@ -40,7 +40,7 @@ export default function Layout() {
         {!displayMenu && (
           <button
             type="button"
-            className="h-5 absolute mt-2 ml-2"
+            className="absolute ml-1"
             onClick={() => setDisplayMenu(true)}
           >
             <FaIcon icon="fa-expand" />

@@ -33,12 +33,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     );
 
     if (targetCard) {
-      targetCard.scrollIntoView({ behavior: "smooth", block: "center" });
+      // Use a small delay, otherwise sometimes the element is not fully rendered before scrolling, resulting in the element not being centered
+      setTimeout(() => {
+        targetCard.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+          inline: "center",
+        });
+      }, 100);
     }
   }, [isExpanded]);
 
   return (
-    <div className="px-[1vw]">
+    <div className="px-[1vw]" id={cardRef.current}>
       <div
         className={`bg-dark-bg min-w-[300px] ${
           isExpanded ? "w-[52vw] h-full" : "w-[25vw]"
@@ -84,7 +91,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <p className="font-impact text-3xl w-full text-contrast-on-sibling-hover">
                 {title}
               </p>
-              <div className="mt-2 w-full flex" id={cardRef.current}>
+              <div className="mt-2 w-full flex">
                 <div className="w-1/2">
                   <p className="text-start text-lg">{longDescription}</p>
                   <br />

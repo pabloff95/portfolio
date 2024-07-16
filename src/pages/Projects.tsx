@@ -11,7 +11,7 @@ export default function Projects() {
         'Adaptation of the boardgame "Mastermind", with global users rank tranking',
       longDescription:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim debitis sapiente architecto alias temporibus voluptates molestias totam. Nihil, aliquam dicta est eaque praesentium repellat asperiores natus dolore nam ipsam enim.",
-      imgSrc: "./public/images/pages/projects/guessgame.PNG",
+      imgSrc: "/images/pages/projects/guessgame.PNG",
       imgAlt: "The GuessGame project board view",
       githubUrl: "https://github.com/pabloff95/The-GuessGame",
     },
@@ -21,7 +21,7 @@ export default function Projects() {
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim debitis sapiente architecto",
       longDescription:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim debitis sapiente architecto alias temporibus voluptates molestias totam. Nihil, aliquam dicta est eaque praesentium repellat asperiores natus dolore nam ipsam enim.",
-      imgSrc: "./public/images/pages/projects/weather-app.PNG",
+      imgSrc: "/images/pages/projects/weather-app.PNG",
       imgAlt: "Weather app project image",
       githubUrl: "https://github.com/pabloff95/Weather-App",
     },
@@ -31,7 +31,7 @@ export default function Projects() {
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim debitis sapiente architecto",
       longDescription:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim debitis sapiente architecto alias temporibus voluptates molestias totam. Nihil, aliquam dicta est eaque praesentium repellat asperiores natus dolore nam ipsam enim.",
-      imgSrc: "./public/images/pages/projects/finance-manager.PNG",
+      imgSrc: "/images/pages/projects/finance-manager.PNG",
       imgAlt: "Finances Manager project image",
       githubUrl: "https://github.com/pabloff95/Finance-Manager",
     },
@@ -41,7 +41,7 @@ export default function Projects() {
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim debitis sapiente architecto",
       longDescription:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim debitis sapiente architecto alias temporibus voluptates molestias totam. Nihil, aliquam dicta est eaque praesentium repellat asperiores natus dolore nam ipsam enim.",
-      imgSrc: "./public/images/pages/projects/research-study.PNG",
+      imgSrc: "/images/pages/projects/research-study.PNG",
       imgAlt: "Research study project image",
     },
     {
@@ -50,7 +50,7 @@ export default function Projects() {
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim debitis sapiente architecto",
       longDescription:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim debitis sapiente architecto alias temporibus voluptates molestias totam. Nihil, aliquam dicta est eaque praesentium repellat asperiores natus dolore nam ipsam enim.",
-      imgSrc: "./public/images/pages/projects/calculator.PNG",
+      imgSrc: "/images/pages/projects/calculator.PNG",
       imgAlt: "Calculator project image",
       githubUrl: "https://github.com/pabloff95/React-Calculator",
     },
@@ -60,7 +60,7 @@ export default function Projects() {
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim debitis sapiente architecto",
       longDescription:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim debitis sapiente architecto alias temporibus voluptates molestias totam. Nihil, aliquam dicta est eaque praesentium repellat asperiores natus dolore nam ipsam enim.",
-      imgSrc: "./public/images/pages/projects/snake-game.PNG",
+      imgSrc: "/images/pages/projects/snake-game.PNG",
       imgAlt: "Snake Game project image",
       githubUrl: "https://github.com/pabloff95/Snake-Game",
     },

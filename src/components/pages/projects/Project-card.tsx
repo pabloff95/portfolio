@@ -9,6 +9,9 @@ export interface ProjectCardProps {
   imgAlt: string;
   longDescription: string;
   githubUrl?: string;
+  index: number;
+  setExpandedCard: Function;
+  expandedCard: null | number;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -18,6 +21,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   imgAlt,
   longDescription,
   githubUrl,
+  index,
+  setExpandedCard,
+  expandedCard,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const cardRef: MutableRefObject<string> = useRef(title.split(" ").join("_"));
@@ -27,6 +33,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     if (!isExpanded) {
       return;
     }
+
+    setExpandedCard(index);
 
     const targetCard: HTMLElement | null = document.getElementById(
       cardRef?.current
@@ -43,6 +51,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       }, 100);
     }
   }, [isExpanded]);
+
+  useEffect(() => {
+    // Allow only 1 card to be expanded at the same time
+    if (expandedCard === null) {
+      return;
+    }
+
+    if (expandedCard !== index) {
+      setIsExpanded(false);
+    }
+  }, [expandedCard]);
 
   return (
     <div className="px-[1vw]" id={cardRef.current}>

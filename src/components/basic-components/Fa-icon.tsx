@@ -16,6 +16,8 @@ import {
   faMagnifyingGlassPlus,
   faMagnifyingGlassMinus,
   faFileSignature,
+  faEnvelopeCircleCheck,
+  faHourglassHalf,
 } from "@fortawesome/free-solid-svg-icons";
 import { library, IconProp } from "@fortawesome/fontawesome-svg-core";
 
@@ -39,6 +41,8 @@ const iconList: IconDefinition[] = [
   faMagnifyingGlassPlus,
   faMagnifyingGlassMinus,
   faFileSignature,
+  faEnvelopeCircleCheck,
+  faHourglassHalf,
 ];
 
 library.add(...iconList);

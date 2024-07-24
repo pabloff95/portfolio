@@ -18,6 +18,8 @@ import {
   faFileSignature,
   faEnvelopeCircleCheck,
   faHourglassHalf,
+  faArrowUpRightFromSquare,
+  faMapLocation,
 } from "@fortawesome/free-solid-svg-icons";
 import { library, IconProp } from "@fortawesome/fontawesome-svg-core";
 
@@ -43,6 +45,8 @@ const iconList: IconDefinition[] = [
   faFileSignature,
   faEnvelopeCircleCheck,
   faHourglassHalf,
+  faArrowUpRightFromSquare,
+  faMapLocation,
 ];
 
 library.add(...iconList);

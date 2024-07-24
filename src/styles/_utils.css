@@ -30,10 +30,6 @@
 .shadow-contrast-on-hover-child:has(
     > div > div > button > .hover\:bg-primary-contrast:hover
   ),
-.shadow-contrast-on-focus-input:has(* > input:focus),
-.shadow-contrast-on-focus-input:has(* > textarea:focus) {
-  box-shadow: 0px 3px 8px 1px var(--primary-element-contrast);
-}
 
 /* Transform element text color on sibling/child hover*/
 button:has(> img.hover\:bg-primary-contrast):hover

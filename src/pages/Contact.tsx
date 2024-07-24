@@ -9,7 +9,7 @@ export default function Contact() {
       <Section hideTittle fullHeight>
         <div className="py-6 grid grid-cols-2 h-full">
           <section className="h-fit m-auto">
-            <header className="font-impact text-6xl">
+            <header className="font-impact text-6xl text-primary">
               Let's get in touch!
             </header>
             <main>

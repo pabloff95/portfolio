@@ -16,9 +16,9 @@ interface formData {
 }
 
 const CONTAINER_STYLES: string =
-  "w-5/6 h-fit m-auto bg-dark-bg px-4 py-16 flex flex-col gap-6 rounded-md border-b-4 border-b-primary";
+  "w-5/6 h-fit m-auto bg-secondary-background px-4 py-16 flex flex-col gap-6 rounded-md border-b-4 border-b-primary";
 const BUTTON_STYLES: string =
-  "bg-primary rounded-md text-xl text-dark-bg px-8 py-4 font-impact tracking-wider hover:bg-font-base hover:border-font-base hover:text-primary-contrast  hover:shadow-box-primary-contrast-xl ease-in-out duration-200";
+  "bg-primary rounded-md text-xl text-secondary-background px-8 py-4 font-impact tracking-wider hover:bg-primary-contrast hover:border-primary-contrast";
 
 const MISSING_FIELD_ERROR = "This field cannot be blank";
 
@@ -86,7 +86,6 @@ const ContactForm: React.FC = () => {
   // ---- REMAINING LOGIC ----
   const submitForm = async (event: SyntheticEvent) => {
     event.preventDefault();
-    dispatch(FormEvent.Submit);
 
     // Validate required fields
     const newInvalidFields: string[] = [];
@@ -102,6 +101,7 @@ const ContactForm: React.FC = () => {
     if (newInvalidFields.length > 0) {
       return;
     }
+    dispatch(FormEvent.Submit);
 
     // TODO: add email logic
     // TODO: on error
@@ -128,7 +128,7 @@ const ContactForm: React.FC = () => {
             <div className="h-28 w-28 aspect-square bg-primary rounded-full flex justify-center items-center">
               <svg
                 aria-hidden="true"
-                className="w-20 h-20 animate-spin text-dark-bg fill-primary-contrast"
+                className="w-20 h-20 animate-spin text-secondary-background fill-primary-contrast"
                 viewBox="0 0 100 101"
                 fill="none"
               >
@@ -170,7 +170,7 @@ const ContactForm: React.FC = () => {
                 icon="fa-envelope-circle-check"
                 changeOnHover={false}
                 className="h-4/6 m-auto"
-                iconColor="var(--bg-color-dark)"
+                iconColor="var(--dark-secondary-background)"
               />
             </div>
           </div>
@@ -205,7 +205,7 @@ const ContactForm: React.FC = () => {
               icon="fa-file-signature"
               changeOnHover={false}
               className="h-4/6 m-auto"
-              iconColor="var(--bg-color-dark)"
+              iconColor="var(--dark-secondary-background)"
             />
           </div>
         </div>

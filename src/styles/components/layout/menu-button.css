@@ -11,7 +11,7 @@
   /*Prepare background color transition on mouse hover*/
   background: linear-gradient(135deg, var(--text-color) 45%, transparent 5%)
       right,
-    linear-gradient(135deg, #171717 45%, transparent 5%);
+    linear-gradient(135deg, var(--primary-background) 45%, transparent 5%);
   background-size: 250%;
   transition: 0.5s ease-out;
   font-family: var(--font-impact);
@@ -19,6 +19,6 @@
 
 .menu-button:hover {
   background-position: left; /*Executes background color transition*/
-  box-shadow: inset 6px 1px 0px var(--primary-element-contrast);
-  color: var(--primary-element-contrast);
+  box-shadow: inset 6px 1px 0px var(--primary-element-lighter-contrast);
+  color: var(--primary-element-lighter-contrast);
 }

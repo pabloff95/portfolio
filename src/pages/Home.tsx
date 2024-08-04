@@ -18,16 +18,16 @@ export default function Home() {
             </p>
             <div className="m-auto w-[80%] bg-font-base h-1 rounded-lg"></div>
             <div className="mt-2 flex gap-12 w-full justify-center">
-              <div className="py-3 px-6 border-2 text-lg rounded-md">
+              <div className="py-3 px-6 border-2 border-font-base text-lg rounded-md flex items-center justify-center">
                 <span>Web development</span>
               </div>
-              <div className="py-3 px-6 border-2 text-lg rounded-md">
+              <div className="py-3 px-6 border-2 border-font-base text-lg rounded-md flex items-center justify-center">
                 <span>UI Design</span>
               </div>
-              <div className="py-3 px-6 border-2 text-lg rounded-md">
+              <div className="py-3 px-6 border-2 border-font-base text-lg rounded-md flex items-center justify-center">
                 <span>User Experience</span>
               </div>
-              <div className="py-3 px-6 border-2 text-lg rounded-md">
+              <div className="py-3 px-6 border-2 border-font-base text-lg rounded-md flex items-center justify-center">
                 <span>Fullstack</span>
               </div>
             </div>

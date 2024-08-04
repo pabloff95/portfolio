@@ -66,7 +66,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div className="px-[1vw]" id={cardRef.current}>
       <div
-        className={`bg-dark-bg min-w-[300px] ${
+        className={`bg-secondary-background min-w-[300px] ${
           isExpanded ? "w-[52vw] h-full" : "w-[25vw]"
         } rounded-xl shadow-box-primary shadow-contrast-on-hover-child ease-in-out duration-200`}
       >
@@ -87,16 +87,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <p className="mt-2 font-impact text-3xl w-full text-contrast-on-sibling-hover">
                 {title}
               </p>
-              <p className="text-start text-lg">{shortDescription}</p>
+              <p className="text-font-base text-start text-lg">
+                {shortDescription}
+              </p>
               <button
-                className="mt-2 w-full text-xl py-2 bg-primary-dark rounded-xl font-bold text-dark-bg tracking-wider hover:bg-primary-contrast"
+                className="mt-2 w-full text-xl py-2 bg-primary-dark rounded-xl font-bold text-font-base tracking-wider hover:bg-primary-contrast"
                 type="button"
                 onClick={() => setIsExpanded(true)}
               >
                 <FaIcon
                   icon="fa-magnifying-glass-plus"
                   className="mr-2"
-                  iconColor="var(--bg-color-dark)"
+                  iconColor="var(--text-color)"
                   changeOnHover={false}
                 ></FaIcon>
                 Read more
@@ -110,7 +112,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <p className="font-impact text-3xl w-full text-contrast-on-sibling-hover">
                 {title}
               </p>
-              <div className="mt-2 w-full flex">
+              <div className="mt-2 w-full flex text-font-base ">
                 <div className="w-1/2">
                   <p className="text-start text-lg">{longDescription}</p>
                   <br />
@@ -139,14 +141,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </div>
             <div className="w-full flex justify-start mt-2">
               <button
-                className="mt-2 w-fit text-xl py-2 px-6 bg-primary-dark rounded-xl font-bold text-dark-bg tracking-wider hover:bg-primary-contrast"
+                className="mt-2 w-fit text-xl py-2 px-6 bg-primary-dark rounded-xl font-bold text-font-base tracking-wider hover:bg-primary-contrast"
                 type="button"
                 onClick={() => setIsExpanded(false)}
               >
                 <FaIcon
                   icon="fa-magnifying-glass-minus"
                   className="mr-2"
-                  iconColor="var(--bg-color-dark)"
+                  iconColor="var(--text-color)"
                   changeOnHover={false}
                 ></FaIcon>
                 Read less

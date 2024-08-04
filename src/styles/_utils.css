@@ -29,8 +29,9 @@
   ),
 .shadow-contrast-on-hover-child:has(
     > div > div > button > .hover\:bg-primary-contrast:hover
-  ),
-
+  ) {
+  box-shadow: 0px 3px 8px 1px var(--primary-element-lighter-contrast);
+}
 /* Transform element text color on sibling/child hover*/
 button:has(> img.hover\:bg-primary-contrast):hover
   + .text-contrast-on-sibling-hover,

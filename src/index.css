@@ -1,7 +1,6 @@
 @import url("./styles/components/layout/menu-button.css");
 @import url("./styles/components/basic-components/logo.css");
 @import url("./styles/_utils.css");
-/* @import url("http://fonts.cdnfonts.com/css/chalk"); Chalk font" */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap"); /*Impact font*/
 
 @tailwind base;
@@ -9,14 +8,54 @@
 @tailwind utilities;
 
 :root {
-  --bg-color: #262625;
-  --bg-color-dark: #000000;
-  --text-color: #f2f2f2;
-  --primary-element: #4fe1c4;
-  --primary-element-dark: #08a888;
-  --primary-element-contrast: #ed944d;
-  /* --font-chalk: "Chalk", sans-serif; */
   --font-impact: "Impact", "Raleway", sans-serif;
+
+  --light-primary-background: #ffffff;
+  --dark-primary-background: #262625;
+
+  --light-secondary-background: #f3f3f3;
+  --dark-secondary-background: #000000;
+
+  --light-primary-element: #fc923e;
+  --dark-primary-element: #4fe1c4;
+
+  --light-primary-element-dark: #f58e19;
+  --dark-primary-element-dark: #08a888;
+
+  --light-primary-element-contrast: #3378b8;
+  --dark-primary-element-contrast: #ed944d;
+
+  --light-primary-element-lighter-contrast: #3399b8;
+  --dark-primary-element-lighter-contrast: var(
+    --dark-primary-element-contrast
+  ); /*No change for dark mode, keep --dark-primary-element-contrast */
+
+  --light-text-color: #3d2929;
+  --dark-text-color: #f2f2f2;
+}
+
+body {
+  --primary-background: var(--light-primary-background);
+  --secondary-background: var(--light-secondary-background);
+  --primary-element: var(--light-primary-element);
+  --primary-element-contrast: var(--light-primary-element-contrast);
+  --primary-element-dark: var(--light-primary-element-dark);
+  --primary-element-lighter-contrast: var(
+    --light-primary-element-lighter-contrast
+  );
+  --text-color: var(--light-text-color);
+}
+
+body.dark {
+  --primary-background: var(--dark-primary-background);
+  --secondary-background: var(--dark-secondary-background);
+  --primary-element: var(--dark-primary-element);
+  --primary-element-contrast: var(--dark-primary-element-contrast);
+  --primary-element-dark: var(--dark-primary-element-dark);
+  --primary-element-lighter-contrast: var(
+    --dark-primary-element-lighter-contrast
+  );
+  --text-color: var(--dark-text-color);
 }
 
 html,
@@ -27,7 +66,7 @@ body,
   height: 100%;
   width: 100%;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: var(--bg-color);
+  background-color: var(--primary-background);
   color: var(--text-color);
 }
 
@@ -41,18 +80,18 @@ body,
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-element-contrast);
+  background: var(--primary-element-lighter-contrast);
 }
 /* ------------------------ */
 
 /* ---- TEXT SELECTION ---- */
 ::selection {
-  color: var(--bg-color);
+  color: var(--primary-background);
   background: var(--primary-element);
 }
 ::-moz-selection {
   /*firefox*/
-  color: var(--bg-color);
+  color: var(--primary-background);
   background: var(--primary-element);
 }
 /* -------------------------- */

@@ -3,10 +3,10 @@
   font-weight: bolder;
   color: var(--text-color);
   text-shadow: 4.5px 4.5px var(--primary-element-dark);
-  -webkit-text-stroke: 1px var(--bg-color);
+  -webkit-text-stroke: 1px var(--dark-primary-background); /*--dark-primary-background suits better also for the light mode*/
   transition: text-shadow 0.2s ease;
 }
 
 .font-logo:hover {
-  text-shadow: 4.5px 4.5px var(--primary-element-contrast);
+  text-shadow: 4.5px 4.5px var(--primary-element-lighter-contrast);
 }

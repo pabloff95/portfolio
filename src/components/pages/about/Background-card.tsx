@@ -27,7 +27,7 @@ const BackgroundCard: React.FC<BackgroundCardProps> = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="w-full text-lg bg-dark-bg p-4 rounded-2xl shadow-box-primary shadow-contrast-on-hover-child">
+    <div className="w-full text-lg bg-secondary-background p-4 rounded-2xl shadow-box-primary shadow-contrast-on-hover-child">
       <div className="flex items-center gap-6 ">
         {(!isExpandable || (isExpandable && !isExpanded)) && (
           <>
@@ -46,14 +46,14 @@ const BackgroundCard: React.FC<BackgroundCardProps> = ({
           {isExpandable && !isExpanded && (
             <div className="w-full flex justify-start">
               <button
-                className="py-0.5 px-2 mt-2 bg-primary-dark rounded text-sm font-bold text-dark-bg tracking-wider hover:bg-primary-contrast"
+                className="py-0.5 px-2 mt-2 bg-primary-dark rounded text-sm font-bold text-secondary-background tracking-wider hover:bg-primary-contrast"
                 type="button"
                 onClick={() => setIsExpanded(true)}
               >
                 <FaIcon
                   icon="fa-magnifying-glass-plus"
                   className="mr-2"
-                  iconColor="var(--bg-color-dark)"
+                  iconColor="var(--dark-secondary-background)"
                   changeOnHover={false}
                 ></FaIcon>
                 Read more
@@ -69,14 +69,14 @@ const BackgroundCard: React.FC<BackgroundCardProps> = ({
         <div>
           {children}
           <button
-            className="py-0.5 px-2 mt-2 bg-primary-dark rounded text-sm font-bold text-dark-bg tracking-wider hover:bg-primary-contrast"
+            className="py-0.5 px-2 mt-2 bg-primary-dark rounded text-sm font-bold text-secondary-background tracking-wider hover:bg-primary-contrast"
             type="button"
             onClick={() => setIsExpanded(false)}
           >
             <FaIcon
               icon="fa-magnifying-glass-minus"
               className="mr-2"
-              iconColor="var(--bg-color-dark)"
+              iconColor="var(--dark-secondary-background)"
               changeOnHover={false}
             ></FaIcon>
             Read less

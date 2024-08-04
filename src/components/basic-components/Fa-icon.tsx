@@ -20,6 +20,8 @@ import {
   faHourglassHalf,
   faArrowUpRightFromSquare,
   faMapLocation,
+  faMoon,
+  faSun,
 } from "@fortawesome/free-solid-svg-icons";
 import { library, IconProp } from "@fortawesome/fontawesome-svg-core";
 
@@ -47,6 +49,8 @@ const iconList: IconDefinition[] = [
   faHourglassHalf,
   faArrowUpRightFromSquare,
   faMapLocation,
+  faMoon,
+  faSun,
 ];
 
 library.add(...iconList);

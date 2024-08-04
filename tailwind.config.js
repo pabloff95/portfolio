@@ -9,13 +9,15 @@ export default {
       },
       colors: {
         "font-base": "var(--text-color)",
+        "primary-background": "var(--primary-background)",
+        "secondary-background": "var(--secondary-background)",
         primary: "var(--primary-element)",
-        "primary-dark": "var(--primary-element-dark)",
         "primary-contrast": "var(--primary-element-contrast)",
-        "dark-bg": "var(--bg-color-dark)",
-        "layout-bg": "var(--bg-color)",
+        "primary-lighter-contrast": "var(--primary-element-lighter-contrast)",
+        "primary-dark": "var(--primary-element-dark)",
       },
     },
   },
   plugins: [],
+  darkMode: "class",
 };

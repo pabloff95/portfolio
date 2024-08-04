@@ -15,7 +15,7 @@ const ExternalLink: React.FC<ExternalLinkProps> = ({
   children,
   showLinkClasses = false,
 }) => {
-  const linkClasses = "underline text-primary-dark hover:text-primary";
+  const linkClasses = "underline text-primary-dark hover:text-primary-contrast";
 
   return (
     <a

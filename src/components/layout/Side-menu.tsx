@@ -37,7 +37,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
             <FaIcon icon="fa-compress" />
           </button>
           <button type="button" onClick={() => darkModeHandler()}>
-            <FaIcon icon={`${displayDarkMode ? "fa-moon" : "fa-sun"}`} />
+            <FaIcon icon={`${displayDarkMode ? "fa-sun" : "fa-moon"}`} />
           </button>
         </div>
       </section>

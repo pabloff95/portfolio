@@ -59,7 +59,7 @@ export default function Layout() {
               <FaIcon icon="fa-expand" />
             </button>
             <button type="button" onClick={() => darkModeHandler()}>
-              <FaIcon icon={`${displayDarkMode ? "fa-moon" : "fa-sun"}`} />
+              <FaIcon icon={`${displayDarkMode ? "fa-sun" : "fa-moon"}`} />
             </button>
           </div>
         )}

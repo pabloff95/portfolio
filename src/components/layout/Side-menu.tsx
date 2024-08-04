@@ -23,8 +23,9 @@ const SideMenu: React.FC<SideMenuProps> = ({
       </section>
       <section className="row-span-4 flex flex-col gap justify-center items-center">
         <MenuButton to="/" text="HOME" />
-        <MenuButton to="/projects" text="PROJECTS" />
         <MenuButton to="/about" text="ABOUT" />
+        <MenuButton to="/stack" text="STACK" />
+        <MenuButton to="/projects" text="PROJECTS" />
         <MenuButton to="/contact" text="CONTACT" />
       </section>
       <section className="row-span-1 flex items-end">

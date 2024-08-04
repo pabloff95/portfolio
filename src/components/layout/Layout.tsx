@@ -50,7 +50,7 @@ export default function Layout() {
         } overflow-y-auto`}
       >
         {!displayMenu && (
-          <div className="fixed top-0 right-0 w-fit p-4 flex justify-center gap-4">
+          <div className="fixed right-2 w-fit p-4 text-lg flex justify-center gap-4">
             <button
               type="button"
               className="ml-1"

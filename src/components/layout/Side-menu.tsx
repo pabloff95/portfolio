@@ -29,7 +29,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
         <MenuButton to="/contact" text="CONTACT" />
       </section>
       <section className="row-span-1 flex items-end">
-        <div className="w-full p-4 flex justify-center gap-4">
+        <div className="w-full p-4 flex justify-center text-lg gap-4">
           <button
             type="button"
             className="h-1"

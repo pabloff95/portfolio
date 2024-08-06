@@ -38,3 +38,7 @@ button:has(> img.hover\:bg-primary-contrast):hover
 .text-contrast-on-sibling-hover:has(~ button:hover) {
   color: var(--primary-element-contrast);
 }
+
+.img-shadow {
+  filter: drop-shadow(0 0 5px var(--dark-secondary-background));
+}

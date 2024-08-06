@@ -22,6 +22,9 @@ import {
   faMapLocation,
   faMoon,
   faSun,
+  faDesktop,
+  faDatabase,
+  faCode,
 } from "@fortawesome/free-solid-svg-icons";
 import { library, IconProp } from "@fortawesome/fontawesome-svg-core";
 
@@ -51,6 +54,9 @@ const iconList: IconDefinition[] = [
   faMapLocation,
   faMoon,
   faSun,
+  faDesktop,
+  faDatabase,
+  faCode,
 ];
 
 library.add(...iconList);

@@ -35,7 +35,7 @@ const SKILLS: SkillsInterface = {
       {
         name: "Git",
         imgPath: "/images/pages/stack/git.png",
-        level: 7.0,
+        level: 2.0,
       },
     ],
   },
@@ -129,11 +129,12 @@ export default function Stack() {
           <div>
             {selectedStack && (
               <div className="my-12 w-full flex justify-center gap-12">
-                {selectedStack.stack.map(({ name, imgPath }, index) => {
+                {selectedStack.stack.map(({ name, imgPath, level }, index) => {
                   return (
                     <StackItem
                       name={name}
                       src={imgPath}
+                      level={level}
                       key={`${index}-stack-item`}
                     />
                   );

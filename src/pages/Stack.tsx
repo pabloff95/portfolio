@@ -114,7 +114,7 @@ export default function Stack() {
   );
 
   const noStackSelectedContainerStyles: string =
-    "w-full h-full gap-4 justify-evenly items-center";
+    "w-full h-full justify-center gap-8 items-center";
   const stackSelectedContainerStyles: string =
     "justify-center gap-8 items-start";
 
@@ -124,33 +124,38 @@ export default function Stack() {
 
   return (
     <>
-      <Section fullHeight title="Stack">
-        <section className="w-full h-full">
+      <Section fullHeight hideTittle>
+        <section className="w-full h-full flex flex-col">
           <div
             className={`${
-              selectedStack?.name
+              selectedStack
                 ? stackSelectedContainerStyles
                 : noStackSelectedContainerStyles
-            } flex flex-row ease-in-out duration-5000`}
+            } flex flex-col ease-in-out duration-5000`}
           >
-            <SkillButton
-              name={SKILLS.frontEnd.name}
-              icon={SKILLS.frontEnd.icon}
-              handleButtonClick={() => handleSelectStack(SKILLS.frontEnd)}
-              selectedStack={selectedStack}
-            />
-            <SkillButton
-              name={SKILLS.backEnd.name}
-              icon={SKILLS.backEnd.icon}
-              handleButtonClick={() => handleSelectStack(SKILLS.backEnd)}
-              selectedStack={selectedStack}
-            />
-            <SkillButton
-              name={SKILLS.other.name}
-              icon={SKILLS.other.icon}
-              handleButtonClick={() => handleSelectStack(SKILLS.other)}
-              selectedStack={selectedStack}
-            />
+            <div className="font-impact text-6xl text-primary">
+              Discover my Tech Stack!
+            </div>
+            <div className="w-full flex justify-center flex-row gap-8">
+              <SkillButton
+                name={SKILLS.frontEnd.name}
+                icon={SKILLS.frontEnd.icon}
+                handleButtonClick={() => handleSelectStack(SKILLS.frontEnd)}
+                selectedStack={selectedStack}
+              />
+              <SkillButton
+                name={SKILLS.backEnd.name}
+                icon={SKILLS.backEnd.icon}
+                handleButtonClick={() => handleSelectStack(SKILLS.backEnd)}
+                selectedStack={selectedStack}
+              />
+              <SkillButton
+                name={SKILLS.other.name}
+                icon={SKILLS.other.icon}
+                handleButtonClick={() => handleSelectStack(SKILLS.other)}
+                selectedStack={selectedStack}
+              />
+            </div>
           </div>
           <div>
             {selectedStack && (

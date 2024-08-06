@@ -21,7 +21,7 @@ const SkillButton: React.FC<SkillButtonProps> = ({
     return (
       <button type="button" onClick={handleButtonClick}>
         <div
-          className={`mt-12  border-2 rounded-sm min-w-[10vw] flex gap-2 items-center justify-center ${
+          className={`border-2 rounded-sm min-w-[10vw] flex gap-2 items-center justify-center ${
             isStackSelected
               ? "bg-primary-contrast border-primary-contrast"
               : "bg-secondary-background"
@@ -54,7 +54,7 @@ const SkillButton: React.FC<SkillButtonProps> = ({
         <button
           type="button"
           onClick={handleButtonClick}
-          className="bg-primary hover:bg-primary-contrast py-2 px-6 text-secondary-background text-lg font-bold rounded-md"
+          className="font-impact bg-primary hover:bg-primary-contrast py-2 px-6 text-secondary-background text-lg font-bold rounded-md"
         >
           SELECT
         </button>

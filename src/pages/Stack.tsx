@@ -28,14 +28,34 @@ const SKILLS: SkillsInterface = {
         level: 9.0,
       },
       {
-        name: "Python",
-        imgPath: "/images/pages/stack/python.png",
-        level: 5.0,
+        name: "HTML",
+        imgPath: "/images/pages/stack/html.png",
+        level: 9.0,
       },
       {
-        name: "Git",
-        imgPath: "/images/pages/stack/git.png",
-        level: 2.0,
+        name: "CSS",
+        imgPath: "/images/pages/stack/css.png",
+        level: 9.0,
+      },
+      {
+        name: "Ember",
+        imgPath: "/images/pages/stack/ember_js.png",
+        level: 9.0,
+      },
+      {
+        name: "React",
+        imgPath: "/images/pages/stack/react.png",
+        level: 7.0,
+      },
+      {
+        name: "Tailwind",
+        imgPath: "/images/pages/stack/tailwind.png",
+        level: 7.5,
+      },
+      {
+        name: "Typescript",
+        imgPath: "/images/pages/stack/typescript.png",
+        level: 5.5,
       },
     ],
   },
@@ -44,19 +64,29 @@ const SKILLS: SkillsInterface = {
     icon: "database",
     stack: [
       {
+        name: "SQL",
+        imgPath: "/images/pages/stack/sql.png",
+        level: 7.0,
+      },
+      {
+        name: "GraphQl",
+        imgPath: "/images/pages/stack/graphql.png",
+        level: 7.0,
+      },
+      {
+        name: "Node",
+        imgPath: "/images/pages/stack/node.png",
+        level: 5.0,
+      },
+      {
         name: "Python",
         imgPath: "/images/pages/stack/python.png",
         level: 5.0,
       },
       {
-        name: "Git",
-        imgPath: "/images/pages/stack/git.png",
-        level: 7.0,
-      },
-      {
-        name: "JavaScript",
-        imgPath: "/images/pages/stack/js.png",
-        level: 9.0,
+        name: "Flask",
+        imgPath: "/images/pages/stack/flask.png",
+        level: 3.0,
       },
     ],
   },
@@ -70,14 +100,9 @@ const SKILLS: SkillsInterface = {
         level: 7.0,
       },
       {
-        name: "Python",
-        imgPath: "/images/pages/stack/python.png",
-        level: 5.0,
-      },
-      {
-        name: "JavaScript",
-        imgPath: "/images/pages/stack/js.png",
-        level: 9.0,
+        name: "Docker",
+        imgPath: "/images/pages/stack/docker.png",
+        level: 2.0,
       },
     ],
   },
@@ -90,7 +115,8 @@ export default function Stack() {
 
   const noStackSelectedContainerStyles: string =
     "w-full h-full gap-4 justify-evenly items-center";
-  const stackSelectedContainerStyles: string = "items-start";
+  const stackSelectedContainerStyles: string =
+    "justify-center gap-8 items-start";
 
   const handleSelectStack: (stack: StackInterface) => void = (stack) => {
     setSelectedStack(stack);
@@ -128,7 +154,7 @@ export default function Stack() {
           </div>
           <div>
             {selectedStack && (
-              <div className="my-12 w-full flex justify-center gap-12">
+              <div className="my-12 m-auto w-[80%] flex flex-wrap justify-center">
                 {selectedStack.stack.map(({ name, imgPath, level }, index) => {
                   return (
                     <StackItem

@@ -55,29 +55,31 @@ const StackItem: React.FC<StackItemPropsInterface> = ({ src, name, level }) => {
       : "#ff7400"; // Low level default color
 
   return (
-    <div className="h-[20vh] aspect-square flex flex-col justify-center">
-      <ProgressProvider endValue={level}>
-        {(value: number) => (
-          <CircularProgressbarWithChildren
-            value={value}
-            maxValue={10}
-            circleRatio={0.75}
-            strokeWidth={5}
-            styles={buildStyles({
-              rotation: 1 / 2 + 1 / 8,
-              strokeLinecap: "round",
-              trailColor: "var(--secondary-background)",
-              pathColor,
-              pathTransitionDuration: 1,
-            })}
-          >
-            <img src={src} alt={name} className="h-1/2 img-shadow " />
-            <span className="absolute bottom-0 font-impact text-center">
-              {name}
-            </span>
-          </CircularProgressbarWithChildren>
-        )}
-      </ProgressProvider>
+    <div className="basis-1/3 my-4">
+      <div className="h-[20vh] m-auto aspect-square flex flex-col justify-center">
+        <ProgressProvider endValue={level}>
+          {(value: number) => (
+            <CircularProgressbarWithChildren
+              value={value}
+              maxValue={10}
+              circleRatio={0.75}
+              strokeWidth={5}
+              styles={buildStyles({
+                rotation: 1 / 2 + 1 / 8,
+                strokeLinecap: "round",
+                trailColor: "var(--secondary-background)",
+                pathColor,
+                pathTransitionDuration: 1,
+              })}
+            >
+              <img src={src} alt={name} className="h-1/2 img-shadow " />
+              <span className="absolute bottom-0 font-impact text-center">
+                {name}
+              </span>
+            </CircularProgressbarWithChildren>
+          )}
+        </ProgressProvider>
+      </div>
     </div>
   );
 };

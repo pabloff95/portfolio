@@ -21,7 +21,7 @@ const SkillButton: React.FC<SkillButtonProps> = ({
     return (
       <button type="button" onClick={handleButtonClick}>
         <div
-          className={`mt-12 mr-2 border-2 rounded-sm min-w-[10vw] flex gap-2 items-center justify-center ${
+          className={`mt-12  border-2 rounded-sm min-w-[10vw] flex gap-2 items-center justify-center ${
             isStackSelected
               ? "bg-primary-contrast border-primary-contrast"
               : "bg-secondary-background"

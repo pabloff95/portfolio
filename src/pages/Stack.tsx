@@ -43,19 +43,29 @@ const SKILLS: SkillsInterface = {
         level: 9.0,
       },
       {
+        name: "Tailwind",
+        imgPath: "/images/pages/stack/tailwind.png",
+        level: 8,
+      },
+      {
         name: "React",
         imgPath: "/images/pages/stack/react.png",
         level: 7.0,
       },
       {
-        name: "Tailwind",
-        imgPath: "/images/pages/stack/tailwind.png",
-        level: 7.5,
-      },
-      {
         name: "Typescript",
         imgPath: "/images/pages/stack/typescript.png",
         level: 5.5,
+      },
+      {
+        name: "Bootstrap",
+        imgPath: "/images/pages/stack/bootstrap.png",
+        level: 5,
+      },
+      {
+        name: "Angular",
+        imgPath: "/images/pages/stack/angular.png",
+        level: 1,
       },
     ],
   },
@@ -69,24 +79,34 @@ const SKILLS: SkillsInterface = {
         level: 7.0,
       },
       {
-        name: "GraphQl",
-        imgPath: "/images/pages/stack/graphql.png",
-        level: 7.0,
-      },
-      {
         name: "Node",
         imgPath: "/images/pages/stack/node.png",
-        level: 5.0,
+        level: 4.0,
       },
       {
         name: "Python",
         imgPath: "/images/pages/stack/python.png",
-        level: 5.0,
+        level: 4.0,
       },
       {
         name: "Flask",
         imgPath: "/images/pages/stack/flask.png",
         level: 3.0,
+      },
+      {
+        name: "MongoDB",
+        imgPath: "/images/pages/stack/mongo_db.png",
+        level: 1.5,
+      },
+      {
+        name: "PHP",
+        imgPath: "/images/pages/stack/php.png",
+        level: 1.5,
+      },
+      {
+        name: "C#",
+        imgPath: "/images/pages/stack/c_sharp.png",
+        level: 1.5,
       },
     ],
   },
@@ -95,14 +115,24 @@ const SKILLS: SkillsInterface = {
     icon: "code",
     stack: [
       {
+        name: "GraphQl",
+        imgPath: "/images/pages/stack/graphql.png",
+        level: 8.0,
+      },
+      {
         name: "Git",
         imgPath: "/images/pages/stack/git.png",
-        level: 7.0,
+        level: 7.5,
+      },
+      {
+        name: "CI/CD",
+        imgPath: "/images/pages/stack/ci_cd.png",
+        level: 3.5,
       },
       {
         name: "Docker",
         imgPath: "/images/pages/stack/docker.png",
-        level: 2.0,
+        level: 1.5,
       },
     ],
   },
@@ -112,11 +142,6 @@ export default function Stack() {
   const [selectedStack, setSelectedStack] = useState<StackInterface | null>(
     null
   );
-
-  const noStackSelectedContainerStyles: string =
-    "w-full h-full justify-center gap-8 items-center";
-  const stackSelectedContainerStyles: string =
-    "justify-center gap-8 items-start";
 
   const handleSelectStack: (stack: StackInterface) => void = (stack) => {
     setSelectedStack(stack);
@@ -128,15 +153,25 @@ export default function Stack() {
         <section className="w-full h-full flex flex-col">
           <div
             className={`${
-              selectedStack
-                ? stackSelectedContainerStyles
-                : noStackSelectedContainerStyles
-            } flex flex-col ease-in-out duration-5000`}
+              selectedStack ? "items-start" : "w-full h-full  items-center"
+            } flex flex-col justify-center gap-8 ease-in-out duration-5000`}
           >
             <div className="font-impact text-6xl text-primary">
               Discover my Tech Stack!
             </div>
-            <div className="w-full flex justify-center flex-row gap-8">
+            {!selectedStack && (
+              <p className="paragraph w-[80%]">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Nostrum doloremque voluptatem voluptates. Porro corporis in
+                cumque dolorem saepe autem quaerat dolores eius distinctio
+                doloremque? Nam nihil voluptate ratione officiis error!
+              </p>
+            )}
+            <div
+              className={`w-full flex justify-center flex-row ${
+                selectedStack ? "gap-8" : "gap-16"
+              }`}
+            >
               <SkillButton
                 name={SKILLS.frontEnd.name}
                 icon={SKILLS.frontEnd.icon}
@@ -159,7 +194,7 @@ export default function Stack() {
           </div>
           <div>
             {selectedStack && (
-              <div className="my-12 m-auto w-[80%] flex flex-wrap justify-center">
+              <div className="my-12 m-auto w-[80%] lg:w-1/2 flex flex-wrap justify-center">
                 {selectedStack.stack.map(({ name, imgPath, level }, index) => {
                   return (
                     <StackItem

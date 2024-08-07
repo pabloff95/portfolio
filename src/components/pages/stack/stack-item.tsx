@@ -42,7 +42,7 @@ const LEVEL_PALETTE: levelPaletteInterface = {
   },
   mediumLevel: {
     limit: 3,
-    color: "#FFFF33",
+    color: "#ffd32c",
   },
 };
 

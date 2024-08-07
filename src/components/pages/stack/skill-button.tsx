@@ -42,7 +42,7 @@ const SkillButton: React.FC<SkillButtonProps> = ({
 
   return (
     <div>
-      <div className="min-w-[18vw] flex flex-col gap-4 items-center bg-secondary-background justify-center p-6 rounded-t-lg border-b-4 border-b-primary ease-in-out duration-500">
+      <div className="min-w-[18vw] flex flex-col gap-4 items-center bg-secondary-background border-b-4 border-b-primary-dark rounded-t-md justify-center p-6 transition ease-in-out duration-500 shadow-black-85">
         <span className="font-impact text-3xl">{name}</span>
         <div className="h-[15vh] aspect-square p-6">
           <FaIcon
@@ -54,9 +54,9 @@ const SkillButton: React.FC<SkillButtonProps> = ({
         <button
           type="button"
           onClick={handleButtonClick}
-          className="font-impact bg-primary hover:bg-primary-contrast py-2 px-6 text-secondary-background text-lg font-bold rounded-md"
+          className="w-full font-impact bg-primary hover:bg-primary-contrast py-2 text-secondary-background text-lg font-bold rounded-sm"
         >
-          SELECT
+          SHOW MORE
         </button>
       </div>
     </div>

@@ -1,8 +1,48 @@
 import Section from "../components/basic-components/Section";
 import SoftSkill from "../components/pages/about/Soft-skill";
 import BackgroundCard from "../components/pages/about/Background-card";
+import TimeLine from "../components/pages/about/Time-line";
+import { TimeLineItemProps } from "../components/pages/about/Time-line-item";
 
 export default function About() {
+  const workExperience: TimeLineItemProps[] = [
+    {
+      job: "Full stack developer",
+      from: "02/2022",
+      to: "Present",
+      company: "Data Ahead",
+      companyUrl: "www.dataahead.de",
+      location: "Nürnberg | Germany",
+      shortText:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo deserunt earum architecto omnis, libero nulla sint",
+      longText:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat accusamus modi rerum ullam temporibus cum sequi officia pariatur saepe voluptate, mollitia iusto est sed, dicta hic, consequatur ipsa ipsam quisquam.",
+    },
+    {
+      job: "IT Validator",
+      from: "12/2021",
+      to: "03/2021",
+      company: "Capgemini",
+      companyUrl: "www.capgemini.com",
+      location: "Barcelona | Spain",
+      shortText:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo deserunt earum architecto omnis, libero nulla sint",
+      longText:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat accusamus modi rerum ullam temporibus cum sequi officia pariatur saepe voluptate, mollitia iusto est sed, dicta hic, consequatur ipsa ipsam quisquam.",
+    },
+    {
+      job: "Resear intern",
+      from: "03/2020",
+      to: "09/2020",
+      company: "Forest & Nature Lab",
+      location: "Ghent | Belgium",
+      shortText:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo deserunt earum architecto omnis, libero nulla sint",
+      longText:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat accusamus modi rerum ullam temporibus cum sequi officia pariatur saepe voluptate, mollitia iusto est sed, dicta hic, consequatur ipsa ipsam quisquam.",
+    },
+  ];
+
   return (
     <>
       <Section title="About me">
@@ -36,54 +76,7 @@ export default function About() {
       </Section>
       <Section title="Work experience">
         <div className="my-5 py-5 mx-auto flex flex-col gap-6 w-2/3">
-          <BackgroundCard
-            from="2022"
-            fromLong="02/2022"
-            to="2024"
-            toLong="12/2024"
-            title="Full stack developer"
-            place="Data Ahead (Nürnberg)"
-            isExpandable={true}
-          >
-            <p className="paragraph">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Explicabo deserunt earum architecto omnis, libero nulla sint
-              fugiat labore adipisci. Id totam tenetur accusamus nobis quasi at
-              blanditiis dolorum asperiores distinctio?
-            </p>
-          </BackgroundCard>
-          <BackgroundCard
-            from="2021"
-            fromLong="12/2021"
-            to="2021"
-            toLong="03/2021"
-            title="IT Validator"
-            place="Capgemini (Barcelona)"
-            isExpandable={true}
-          >
-            <p className="paragraph">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Explicabo deserunt earum architecto omnis, libero nulla sint
-              fugiat labore adipisci. Id totam tenetur accusamus nobis quasi at
-              blanditiis dolorum asperiores distinctio?
-            </p>
-          </BackgroundCard>
-          <BackgroundCard
-            from="2020"
-            fromLong="03/2020"
-            to="2020"
-            toLong="09/2020"
-            title="Resear intern"
-            place="Forest & Nature Lab (Ghent University)"
-            isExpandable={true}
-          >
-            <p className="paragraph">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Explicabo deserunt earum architecto omnis, libero nulla sint
-              fugiat labore adipisci. Id totam tenetur accusamus nobis quasi at
-              blanditiis dolorum asperiores distinctio?
-            </p>
-          </BackgroundCard>
+          <TimeLine events={workExperience} />
         </div>
       </Section>
       <Section title="Academic background">

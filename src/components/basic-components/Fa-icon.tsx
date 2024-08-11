@@ -25,6 +25,7 @@ import {
   faDesktop,
   faDatabase,
   faCode,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { library, IconProp } from "@fortawesome/fontawesome-svg-core";
 
@@ -57,6 +58,7 @@ const iconList: IconDefinition[] = [
   faDesktop,
   faDatabase,
   faCode,
+  faXmark,
 ];
 
 library.add(...iconList);

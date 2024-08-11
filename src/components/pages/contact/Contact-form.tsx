@@ -1,6 +1,7 @@
 import React, {
   useState,
   useEffect,
+  useRef,
   SyntheticEvent,
   ChangeEvent,
   FocusEvent,
@@ -8,10 +9,11 @@ import React, {
 } from "react";
 import FaIcon from "../../basic-components/Fa-icon";
 import { formMachineReducer, FormState, FormEvent } from "./Form-machine";
+import emailjs from "@emailjs/browser";
 
 interface formData {
   email: string;
-  subject: string;
+  name: string;
   message: string;
 }
 
@@ -26,12 +28,13 @@ const ContactForm: React.FC = () => {
   // ---- HOOKS ----
   const [formData, setFormData] = useState<formData>({
     email: "",
-    subject: "",
+    name: "",
     message: "",
   });
   const [textAreaRows, setTextAreaRows] = useState<number>(1);
   const [focusedField, setFocusedField] = useState<string>("");
   const [invalidFields, setInvalidFields] = useState<string[]>([]);
+  const form: any = useRef();
 
   const [formState, dispatch] = useReducer(
     formMachineReducer,
@@ -91,7 +94,7 @@ const ContactForm: React.FC = () => {
     const newInvalidFields: string[] = [];
 
     for (const [key, value] of Object.entries(formData)) {
-      if (!value) {
+      if (["email", "message"].includes(key) && !value) {
         newInvalidFields.push(key);
       }
     }
@@ -103,18 +106,29 @@ const ContactForm: React.FC = () => {
     }
     dispatch(FormEvent.Submit);
 
-    // TODO: add email logic
-    // TODO: on error
-    // dispatch(FormEvent.Fail);
-    // TODO: on success
-    dispatch(FormEvent.Success);
+    emailjs
+      .sendForm(
+        process.env.MAIL_SERVICE_ID || "",
+        process.env.MAIL_TEMPLATE_ID || "",
+        form.current,
+        process.env.MAIL_PUBLIC_KEY || ""
+      )
+      .then(
+        () => {
+          dispatch(FormEvent.Success);
+        },
+        (error) => {
+          console.log(error.text);
+          dispatch(FormEvent.Fail);
+        }
+      );
   };
 
   const handleNewMessage = () => {
     dispatch(FormEvent.Restart);
     setFormData({
       email: "",
-      subject: "",
+      name: "",
       message: "",
     });
   };
@@ -155,10 +169,40 @@ const ContactForm: React.FC = () => {
     );
   }
 
-  // if (formState === FormState.Failed) {
-  //   // TODO: On fail view
-  //   return (<div></div>)
-  // }
+  if (formState === FormState.Failed) {
+    return (
+      <div className={CONTAINER_STYLES}>
+        <header>
+          <div className="w-full flex justify-center">
+            <div className="h-28 aspect-square bg-red-500 rounded-full flex justify-center">
+              <FaIcon
+                icon="fa-xmark"
+                changeOnHover={false}
+                className="h-4/6 m-auto"
+                iconColor="var(--dark-secondary-background)"
+              />
+            </div>
+          </div>
+        </header>
+        <main>
+          <div className="px-4 w-full">
+            <p className="paragraph text-center">
+              Something went wrong, please try to send a message again
+            </p>
+          </div>
+        </main>
+        <footer className="w-full flex justify-center">
+          <button
+            className={BUTTON_STYLES}
+            type="button"
+            onClick={() => dispatch(FormEvent.Restart)}
+          >
+            BACK
+          </button>
+        </footer>
+      </div>
+    );
+  }
 
   if (formState === FormState.Submitted) {
     return (
@@ -197,7 +241,7 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <form onSubmit={submitForm} className={CONTAINER_STYLES}>
+    <form ref={form} onSubmit={submitForm} className={CONTAINER_STYLES}>
       <header>
         <div className="w-full flex justify-center">
           <div className="h-28 aspect-square bg-primary rounded-full flex justify-center">
@@ -235,6 +279,7 @@ const ContactForm: React.FC = () => {
             onChange={handleFormInput}
             onFocus={handleFieldGainedFocus}
             onBlur={() => setFocusedField("")}
+            value={formData.email}
             required
           />
           {invalidFields.includes("email") && (
@@ -243,31 +288,31 @@ const ContactForm: React.FC = () => {
         </section>
         <section>
           <label
-            htmlFor="subject-field"
+            htmlFor="name-field"
             className={`select-none text-lg ${
-              focusedField === "subject"
+              focusedField === "name"
                 ? "text-primary-contrast"
                 : "text-transparent"
             } font-bold ease-in-out duration-500`}
           >
-            Subject *
+            Name
           </label>
           <input
             className={`w-full text-xl bg-transparent !outline-none border-b-2 ${
-              invalidFields.includes("subject")
+              invalidFields.includes("name")
                 ? "border-b-red-500"
                 : "border-b-primary-dark"
             } focus:border-b-primary-contrast`}
             type="text"
-            name="subject"
-            id="subject-field"
-            placeholder={`${focusedField === "subject" ? "" : "Subject *"}`}
+            name="name"
+            id="name-field"
+            placeholder={`${focusedField === "name" ? "" : "Name"}`}
             onChange={handleFormInput}
             onFocus={handleFieldGainedFocus}
             onBlur={() => setFocusedField("")}
-            required
+            value={formData.name}
           />
-          {invalidFields.includes("subject") && (
+          {invalidFields.includes("name") && (
             <p className="text-red-500 text-lg">{MISSING_FIELD_ERROR}</p>
           )}
         </section>
@@ -295,6 +340,7 @@ const ContactForm: React.FC = () => {
             onChange={handleFormInput}
             onFocus={handleFieldGainedFocus}
             onBlur={() => setFocusedField("")}
+            value={formData.message}
             required
           ></textarea>
           {invalidFields.includes("message") && (

@@ -5,41 +5,71 @@ import TimeLine from "../components/pages/about/Time-line";
 import { TimeLineItemProps } from "../components/pages/about/Time-line-item";
 
 export default function About() {
-  const workExperience: TimeLineItemProps[] = [
+  const workExperienceEvents: TimeLineItemProps[] = [
     {
-      job: "Full stack developer",
+      title: "Full stack developer",
       from: "02/2022",
       to: "Present",
-      company: "Data Ahead",
-      companyUrl: "www.dataahead.de",
+      place: "Data Ahead",
+      placeUrl: "www.dataahead.de",
       location: "Nürnberg | Germany",
       shortText:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo deserunt earum architecto omnis, libero nulla sint",
       longText:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat accusamus modi rerum ullam temporibus cum sequi officia pariatur saepe voluptate, mollitia iusto est sed, dicta hic, consequatur ipsa ipsam quisquam.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat accusamus modi rerum ullam temporibus cum sequi officia pariatur saepe voluptate, mollitia iusto est sed, dicta hic, consequatur ipsa ipsam quisquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat accusamus modi rerum ullam temporibus cum sequi officia pariatur saepe voluptate, mollitia iusto est sed, dicta hic, consequatur ipsa ipsam quisquam.",
     },
     {
-      job: "IT Validator",
+      title: "IT Validator",
       from: "12/2021",
       to: "03/2021",
-      company: "Capgemini",
-      companyUrl: "www.capgemini.com",
+      place: "Capgemini",
+      placeUrl: "www.capgemini.com",
       location: "Barcelona | Spain",
       shortText:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo deserunt earum architecto omnis, libero nulla sint",
       longText:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat accusamus modi rerum ullam temporibus cum sequi officia pariatur saepe voluptate, mollitia iusto est sed, dicta hic, consequatur ipsa ipsam quisquam.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat accusamus modi rerum ullam temporibus cum sequi officia pariatur saepe voluptate, mollitia iusto est sed, dicta hic, consequatur ipsa ipsam quisquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat accusamus modi rerum ullam temporibus cum sequi officia pariatur saepe voluptate, mollitia iusto est sed, dicta hic, consequatur ipsa ipsam quisquam.",
     },
     {
-      job: "Resear intern",
+      title: "Resear intern",
       from: "03/2020",
       to: "09/2020",
-      company: "Forest & Nature Lab",
+      place: "Forest & Nature Lab",
       location: "Ghent | Belgium",
       shortText:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo deserunt earum architecto omnis, libero nulla sint",
       longText:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat accusamus modi rerum ullam temporibus cum sequi officia pariatur saepe voluptate, mollitia iusto est sed, dicta hic, consequatur ipsa ipsam quisquam.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat accusamus modi rerum ullam temporibus cum sequi officia pariatur saepe voluptate, mollitia iusto est sed, dicta hic, consequatur ipsa ipsam quisquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat accusamus modi rerum ullam temporibus cum sequi officia pariatur saepe voluptate, mollitia iusto est sed, dicta hic, consequatur ipsa ipsam quisquam.",
+    },
+  ];
+
+  const academicBackgroundEvents: TimeLineItemProps[] = [
+    {
+      from: "2020",
+      to: "2022",
+      title: "Web Applications Development",
+      shortText: "Higher education degree",
+      place: "Ilerna",
+      location: "Spain",
+      isSortVersion: true,
+    },
+    {
+      from: "2019",
+      to: "2020",
+      title: "Terrestrial Ecology & Biodiversity Management",
+      shortText: "Master of Science degree",
+      place: "Autonomous University of Barcelona",
+      location: "Spain",
+      isSortVersion: true,
+    },
+    {
+      from: "2014",
+      to: "2018",
+      title: "Biology",
+      shortText: "Bachelor of Science degree",
+      place: "University of Girona",
+      location: "Spain",
+      isSortVersion: true,
     },
   ];
 
@@ -76,32 +106,12 @@ export default function About() {
       </Section>
       <Section title="Work experience">
         <div className="my-5 py-5 mx-auto flex flex-col gap-6 w-2/3">
-          <TimeLine events={workExperience} />
+          <TimeLine events={workExperienceEvents} />
         </div>
       </Section>
       <Section title="Academic background">
         <div className="my-5 py-5 mx-auto flex flex-col gap-6 w-2/3">
-          <BackgroundCard
-            from="2020"
-            to="2022"
-            title="Web Applications Development"
-            degreeType="Higher education degree"
-            place="Ilerna (Spain)"
-          ></BackgroundCard>
-          <BackgroundCard
-            from="2019"
-            to="2020"
-            title="Terrestrial Ecology & Biodiversity Management"
-            degreeType="Master of Science degree"
-            place="Autonomous University of Barcelona (Spain)"
-          ></BackgroundCard>
-          <BackgroundCard
-            from="2014"
-            to="2018"
-            title="Biology"
-            degreeType="Bachelor of Science degree"
-            place="University of Girona (Spain)"
-          ></BackgroundCard>
+          <TimeLine events={academicBackgroundEvents} />
         </div>
       </Section>
       <Section title="Soft skills">

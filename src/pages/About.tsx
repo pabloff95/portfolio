@@ -1,6 +1,5 @@
 import Section from "../components/basic-components/Section";
 import SoftSkill from "../components/pages/about/Soft-skill";
-import BackgroundCard from "../components/pages/about/Background-card";
 import TimeLine from "../components/pages/about/Time-line";
 import { TimeLineItemProps } from "../components/pages/about/Time-line-item";
 

@@ -10,7 +10,7 @@ export default function About() {
       from: "02/2022",
       to: "Present",
       place: "Data Ahead",
-      placeUrl: "www.dataahead.de",
+      placeUrl: "https://dataahead.de/",
       location: "Nürnberg | Germany",
       shortText:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo deserunt earum architecto omnis, libero nulla sint",
@@ -22,7 +22,7 @@ export default function About() {
       from: "12/2021",
       to: "03/2021",
       place: "Capgemini",
-      placeUrl: "www.capgemini.com",
+      placeUrl: "https://www.capgemini.com/",
       location: "Barcelona | Spain",
       shortText:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo deserunt earum architecto omnis, libero nulla sint",
@@ -34,6 +34,7 @@ export default function About() {
       from: "03/2020",
       to: "09/2020",
       place: "Forest & Nature Lab",
+      placeUrl: "https://www.ugent.be/bw/environment/en/research/fornalab",
       location: "Ghent | Belgium",
       shortText:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo deserunt earum architecto omnis, libero nulla sint",

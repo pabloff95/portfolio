@@ -33,6 +33,8 @@ const TimeLineItem: React.FC<TimeLineItemProps> = ({
     left: `-${dateRange.length * (isSortVersion ? 2 : 1.85)}ch`,
   };
 
+  const longTextHTML = { __html: `<p>${longText}</p>` };
+
   return (
     <li className="my-6 ml-6">
       <div className="relative">
@@ -60,7 +62,10 @@ const TimeLineItem: React.FC<TimeLineItemProps> = ({
             </div>
             <div className="absolute w-5 h-5 border-4 border-font-base bg-primary-background rounded-full mt-1.5 -start-[0.75rem]"></div>
           </div>
-          <p className="paragraph">{displayLongText ? longText : shortText}</p>
+          {displayLongText && (
+            <div className="paragraph" dangerouslySetInnerHTML={longTextHTML} />
+          )}
+          {!displayLongText && <p className="paragraph">{shortText}</p>}
           <button
             className="py-0.5 px-2 bg-primary-dark rounded font-bold text-secondary-background tracking-wider hover:bg-primary-contrast"
             type="button"
@@ -88,9 +93,7 @@ const TimeLineItem: React.FC<TimeLineItemProps> = ({
             </div>
             <div className="absolute w-5 h-5 border-4 border-font-base bg-primary-background rounded-full mt-1.5 -start-[0.75rem]"></div>
           </div>
-          <p className="paragraph my-0">
-            {displayLongText ? longText : shortText}
-          </p>
+          <p className="paragraph my-0">{shortText}</p>
           <p className="text-lg opacity-85">
             {place} | {location}
           </p>

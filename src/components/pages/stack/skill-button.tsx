@@ -56,7 +56,7 @@ const SkillButton: React.FC<SkillButtonProps> = ({
           onClick={handleButtonClick}
           className="w-full font-impact bg-primary hover:bg-primary-contrast py-2 text-secondary-background text-lg font-bold rounded-sm"
         >
-          SHOW MORE
+          SEE MORE
         </button>
       </div>
     </div>

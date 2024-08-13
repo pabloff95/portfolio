@@ -14,10 +14,10 @@ export default function Contact() {
             </header>
             <main>
               <p className="paragraph">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam
-                quibusdam vero magnam explicabo nemo earum, voluptas mollitia
-                corporis ducimus minus, laudantium nisi temporibus optio commodi
-                veniam! Debitis exercitationem nulla autem.
+                I'm always excited to connect with fellow developers, potential
+                collaborators, and anyone interested in my work. Whether you
+                have a question, need some advice, or just want to network,
+                don't hesitate to drop me a message.
               </p>
               <section className="mt-12 flex flex-col gap-8 w-full">
                 <div className="flex gap-4 w-full h-full items-center">

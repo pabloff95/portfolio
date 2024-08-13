@@ -161,10 +161,9 @@ export default function Stack() {
             </div>
             {!selectedStack && (
               <p className="paragraph w-[80%]">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Nostrum doloremque voluptatem voluptates. Porro corporis in
-                cumque dolorem saepe autem quaerat dolores eius distinctio
-                doloremque? Nam nihil voluptate ratione officiis error!
+                Here you will find the set of tools and technologies that I use
+                in my projects. Take a closer look at the resources I use to
+                develop dynamic, responsive and efficient web applications.
               </p>
             )}
             <div

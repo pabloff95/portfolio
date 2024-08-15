@@ -2,6 +2,8 @@ import Section from "../components/basic-components/Section";
 import SoftSkill from "../components/pages/about/Soft-skill";
 import TimeLine from "../components/pages/about/Time-line";
 import { TimeLineItemProps } from "../components/pages/about/Time-line-item";
+import { useState } from "react";
+import Switch from "../components/basic-components/Switch";
 
 export default function About() {
   const workExperienceEvents: TimeLineItemProps[] = [
@@ -16,6 +18,7 @@ export default function About() {
         "Full-Stack Developer focused primarily on Front-End development (80% Front-End, 20% Back-End). My role involves contributing to the development and maintenance of two key company products: Process Hawk and Xitavis.",
       longText:
         'As a Full-Stack Developer at Data Ahead (80% Front-End, 20% Back-End), my role centers on contributing to the development and maintenance of two key company products: Process Hawk and Xitavis. I use a diverse tech stack, including Ember JS, Node JS, GraphQL, MongoDB, Tailwind, Bootstrap, Python, Docker, and Git.<br /><br />My responsibilities encompass a wide range of tasks such as: <ul class="list-disc pl-6"><li>Fix bugs and performance problems.</li><li>Concept, design, plan and testing of new features and further development of the existing functionalities.</li><li>Update dependencies.</li><li>Code reviews.</li><li>Mentor front end developers and onboarding of new team members.</li><li>Participate in technical interviews of new candidates.</li><li>Collaboration with the sales team and management to ensure alignment on project goals and deliverables.</li></ul>',
+      isItRelevant: true,
     },
     {
       title: "Environmental educator",
@@ -28,6 +31,7 @@ export default function About() {
         "Environmental Educator teaching visitors about the biology and ecology of Barbary macaques, offering insights into primate behavior and conservation.",
       longText:
         "Teach about primate biology and ecology (Macaca sylvanus), answer questions of visitors and ensure the security of the visitors.<br /><br />At Affenberg Salem, my responsibilities included teaching visitors about the biology and ecology of primates (specifically Macaca sylvanus). I answered visitor questions, providing detailed information and insights into primate behavior and conservation.<br /><br />Additionally, I ensured the safety and security of all visitors, managing interactions between the public and the primates to create a safe and educational environment.",
+      isItRelevant: false,
     },
     {
       title: "IT Validator",
@@ -40,6 +44,7 @@ export default function About() {
         "Validation of software changes for a leading pharmaceutical company, ensuring compliance with regulatory standards, conducting rigorous testing, and managing risks to maintain the reliability and safety of critical software systems.",
       longText:
         "At Capgemini, I specialized in the validation of changes and new implementations of software for a leading pharmaceutical company.<br /><br />My role involved ensuring that all software modifications met stringent regulatory standards and functioned seamlessly within the company's operational framework. I collaborated closely with cross-functional teams to develop and execute comprehensive validation plans, conduct rigorous testing, and document results to maintain compliance with the industry regulations.<br /><br />As part of my work, I was also responsible for the risk management associated with software changes and new implementations. I conducted risk assessments, developed mitigation strategies, and implemented robust risk management processes. My efforts ensured the reliability and safety of critical software systems, contributing to the overall quality and efficiency of the company's operations.",
+      isItRelevant: true,
     },
     {
       title: "Resear intern",
@@ -52,6 +57,7 @@ export default function About() {
         "Research on the impacts of global warming on forest understorey plants using Integral Projection Models (IPMs) in R. ",
       longText:
         "During the development of my master's thesis, I joined the Forest & Nature Lab research group, where I worked with Integral Projection Models (IPMs) using R to model the impacts of global warming on forest understorey plant populations. As a result of my work, I authored a research paper that was published, highlighting the findings and contributions of my research (see link bellow).<br /><br />In addition to my modeling work, I participated in fieldwork for various experiments, which included tasks such as collecting soil samples, measuring specific plant traits, and trimming tree branches.",
+      isItRelevant: true,
     },
     {
       title: "Primate caregiver",
@@ -64,6 +70,7 @@ export default function About() {
         "Erasmus+ internship focused on captive primates (barbary macaques, woolly monkey) care and research.",
       longText:
         'Erasmus + Grant: One year long intership in the Wild Future´s Monkey Sanctuary in Cornwall, England. The project consists of learning the skills for the animal care in captivity and taking part within the research department of the centre. Work developed:<ul class="list-disc pl-6"><li>Full training in Barbary Macaque (Macaca sylvanus) care.</li><li>Full training in Woolly Monkey (Lagothrix sp.) care.</li><li>Data collect (with Zoo Monitor) and analysis (with Microsoft Excel).</li><li>Giving informative talks to the visitors.</li><li>Construction of new enviromental enrichment items.</li><li>Basic training in Capuchin monkeys (Cebus sp. and Sapajus sp.) care and ecology.</li></ul>',
+      isItRelevant: false,
     },
     {
       title: "Research assistant",
@@ -76,6 +83,7 @@ export default function About() {
         'Internship as a research technician for the project "Biodiversity and Land Use in the Face of Climate Change in High Mountain Systems".',
       longText:
         'During my internship as a research technician for the project "Biodiversity and Land Use in the Face of Climate Change in High Mountain Systems" I undertook a variety of tasks, such as:<ul class="list-disc pl-6"><li>Mapping Species Distribution: I used QGIS to map the distribution of various species.</li><li>Arthropodal Classification: I conducted detailed classification and analysis of arthropods collected during field studies.</li><li>Other field work tasks: installing insect traps, configurating camera traps, checking bird nests, measurement of trees.</li></ul>',
+      isItRelevant: false,
     },
     {
       title: "Research assistant",
@@ -87,6 +95,7 @@ export default function About() {
       shortText: "Internship as researcher of captive chimpanzee behaviour.",
       longText:
         "As part of my bachelor's degree dissertation, I conducted a research study on the behavior of captive chimpanzees (Pan troglodytes). This involved data collection using Zoo Monitor, where I observed and recorded various behavioral patterns.</br></br>Following the data collection, I performed a comprehensive analysis utilizing Microsoft Excel and SPSS statistics to interpret the findings. This research provided valuable insights into chimpanzee behavior and contributed significantly to my academic development.",
+      isItRelevant: false,
     },
     {
       title: "Primate caregiver",
@@ -99,6 +108,7 @@ export default function About() {
         "Internship as primate caregiver of chimpanzees and barbary macaques.",
       longText:
         "During my internship as a primate caregiver, my responsibilities included preparing diets, cleaning enclosures, developing environmental enrichment activities and performing various maintenance tasks.",
+      isItRelevant: false,
     },
   ];
 
@@ -132,6 +142,9 @@ export default function About() {
     },
   ];
 
+  const [showItRelevantExperiencesOnly, setShowItRelevantExperiencesOnly] =
+    useState<boolean>(true);
+
   return (
     <>
       <Section title="About me">
@@ -164,8 +177,25 @@ export default function About() {
         </p>
       </Section>
       <Section title="Work experience">
+        <div className="text-end">
+          <Switch
+            boolValue={showItRelevantExperiencesOnly}
+            onChange={() => {
+              setShowItRelevantExperiencesOnly(!showItRelevantExperiencesOnly);
+            }}
+            label="Display only IT-relevant work experience"
+          />
+        </div>
         <div className="my-5 py-5 mx-auto flex flex-col gap-6 w-2/3">
-          <TimeLine events={workExperienceEvents} />
+          <TimeLine
+            events={workExperienceEvents.filter((event) => {
+              if (showItRelevantExperiencesOnly) {
+                return event.isItRelevant;
+              }
+
+              return true;
+            })}
+          />
         </div>
       </Section>
       <Section title="Academic background">

@@ -12,6 +12,7 @@ export interface TimeLineItemProps {
   place: string;
   placeUrl?: string;
   isSortVersion?: boolean;
+  isItRelevant?: boolean;
 }
 
 const TimeLineItem: React.FC<TimeLineItemProps> = ({

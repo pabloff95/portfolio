@@ -9,4 +9,10 @@ export default defineConfig({
   define: {
     "process.env": process.env,
   },
+  server: {
+    port: 4200,
+    strictPort: true,
+    host: true,
+    origin: "http://0.0.0.0:4200",
+  },
 });

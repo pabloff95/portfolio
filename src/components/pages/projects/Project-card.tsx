@@ -34,13 +34,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     }, 500); // Animation last 1s, it is rotated at the 50% -> after 0.5s the project card content is changed
   };
 
+  const longDescriptionHTML = { __html: `<p>${longDescription}</p>` };
+
   return (
     <div className="px-[1vw]">
       <div
         className="bg-secondary-background min-w-[300px] w-[25vw] h-full rounded-lg shadow-box-primary shadow-contrast-on-hover-child"
         ref={cardRef}
       >
-        <div className="h-[50vh] p-6 flex flex-col gap-2 justify-center items-center text-center">
+        <div className="min-h-[50vh] h-full p-6 flex flex-col gap-2 justify-center items-center text-center">
           <div className="flex flex-col w-full h-full">
             <button
               className="overflow-hidden w-full flex justify-center rounded-lg"
@@ -58,24 +60,31 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <p className="mt-2 font-impact text-3xl w-full text-contrast-on-sibling-hover">
               {title}
             </p>
-            <div className="grow text-font-base text-start text-lg">
-              {isOpened ? longDescription : shortDescription}
-              {isOpened && githubUrl && (
-                <ExternalLink url={githubUrl} showLinkClasses>
-                  <p className="mt-2">
-                    <FaIcon
-                      icon="fa-brands fa-github"
-                      className="mr-2"
-                      iconColor="var(--text-color)"
-                      changeOnHover={false}
-                    ></FaIcon>
-                    See in GitHub
-                  </p>
-                </ExternalLink>
-              )}
-            </div>
+            {isOpened ? (
+              <div className="grow">
+                <div
+                  className="paragraph"
+                  dangerouslySetInnerHTML={longDescriptionHTML}
+                />
+                {githubUrl && (
+                  <ExternalLink url={githubUrl} showLinkClasses>
+                    <p className="paragraph">
+                      <FaIcon
+                        icon="fa-brands fa-github"
+                        className="mr-2"
+                        iconColor="var(--text-color)"
+                        changeOnHover={false}
+                      ></FaIcon>
+                      See in GitHub
+                    </p>
+                  </ExternalLink>
+                )}
+              </div>
+            ) : (
+              <p className="paragraph grow my-1">{shortDescription}</p>
+            )}
             <button
-              className="mt-2 w-full text-xl py-2 bg-primary-dark rounded-lg font-bold text-font-base tracking-wider hover:bg-primary-contrast"
+              className="w-full text-xl py-2 bg-primary-dark rounded-lg font-bold text-font-base tracking-wider hover:bg-primary-contrast"
               type="button"
               onClick={openCard}
             >

@@ -55,7 +55,7 @@ const SKILLS: SkillsInterface = {
       {
         name: "Typescript",
         imgPath: "/images/pages/stack/typescript.avif",
-        level: 5.5,
+        level: 7,
       },
       {
         name: "Bootstrap",
@@ -76,12 +76,12 @@ const SKILLS: SkillsInterface = {
       {
         name: "SQL",
         imgPath: "/images/pages/stack/sql.avif",
-        level: 7.0,
+        level: 7.5,
       },
       {
         name: "Node",
         imgPath: "/images/pages/stack/node.avif",
-        level: 4.0,
+        level: 5.0,
       },
       {
         name: "Python",
@@ -91,17 +91,17 @@ const SKILLS: SkillsInterface = {
       {
         name: "Flask",
         imgPath: "/images/pages/stack/flask.avif",
-        level: 3.0,
+        level: 3.5,
       },
       {
         name: "MongoDB",
         imgPath: "/images/pages/stack/mongo_db.avif",
-        level: 1.5,
+        level: 2.5,
       },
       {
         name: "PHP",
         imgPath: "/images/pages/stack/php.avif",
-        level: 1.5,
+        level: 2.5,
       },
       {
         name: "C#",

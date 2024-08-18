@@ -6,7 +6,7 @@ export default function Home() {
           <div className="w-[40%] hidden-animation hidden-animation-left">
             <img
               className="rounded-3xl m-auto"
-              src="/images/profile.png"
+              src="/images/profile.jpg"
               alt="Profile picture"
             />
           </div>

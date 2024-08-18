@@ -24,47 +24,47 @@ const SKILLS: SkillsInterface = {
     stack: [
       {
         name: "JavaScript",
-        imgPath: "/images/pages/stack/js.png",
+        imgPath: "/images/pages/stack/js.avif",
         level: 9.0,
       },
       {
         name: "HTML",
-        imgPath: "/images/pages/stack/html.png",
+        imgPath: "/images/pages/stack/html.avif",
         level: 9.0,
       },
       {
         name: "CSS",
-        imgPath: "/images/pages/stack/css.png",
+        imgPath: "/images/pages/stack/css.avif",
         level: 9.0,
       },
       {
         name: "Ember",
-        imgPath: "/images/pages/stack/ember_js.png",
+        imgPath: "/images/pages/stack/ember_js.avif",
         level: 9.0,
       },
       {
         name: "Tailwind",
-        imgPath: "/images/pages/stack/tailwind.png",
+        imgPath: "/images/pages/stack/tailwind.avif",
         level: 8,
       },
       {
         name: "React",
-        imgPath: "/images/pages/stack/react.png",
+        imgPath: "/images/pages/stack/react.avif",
         level: 7.0,
       },
       {
         name: "Typescript",
-        imgPath: "/images/pages/stack/typescript.png",
+        imgPath: "/images/pages/stack/typescript.avif",
         level: 5.5,
       },
       {
         name: "Bootstrap",
-        imgPath: "/images/pages/stack/bootstrap.png",
+        imgPath: "/images/pages/stack/bootstrap.avif",
         level: 5,
       },
       {
         name: "Angular",
-        imgPath: "/images/pages/stack/angular.png",
+        imgPath: "/images/pages/stack/angular.avif",
         level: 1,
       },
     ],
@@ -75,37 +75,37 @@ const SKILLS: SkillsInterface = {
     stack: [
       {
         name: "SQL",
-        imgPath: "/images/pages/stack/sql.png",
+        imgPath: "/images/pages/stack/sql.avif",
         level: 7.0,
       },
       {
         name: "Node",
-        imgPath: "/images/pages/stack/node.png",
+        imgPath: "/images/pages/stack/node.avif",
         level: 4.0,
       },
       {
         name: "Python",
-        imgPath: "/images/pages/stack/python.png",
+        imgPath: "/images/pages/stack/python.avif",
         level: 4.0,
       },
       {
         name: "Flask",
-        imgPath: "/images/pages/stack/flask.png",
+        imgPath: "/images/pages/stack/flask.avif",
         level: 3.0,
       },
       {
         name: "MongoDB",
-        imgPath: "/images/pages/stack/mongo_db.png",
+        imgPath: "/images/pages/stack/mongo_db.avif",
         level: 1.5,
       },
       {
         name: "PHP",
-        imgPath: "/images/pages/stack/php.png",
+        imgPath: "/images/pages/stack/php.avif",
         level: 1.5,
       },
       {
         name: "C#",
-        imgPath: "/images/pages/stack/c_sharp.png",
+        imgPath: "/images/pages/stack/c_sharp.avif",
         level: 1.5,
       },
     ],
@@ -116,22 +116,22 @@ const SKILLS: SkillsInterface = {
     stack: [
       {
         name: "GraphQl",
-        imgPath: "/images/pages/stack/graphql.png",
+        imgPath: "/images/pages/stack/graphql.avif",
         level: 8.0,
       },
       {
         name: "Git",
-        imgPath: "/images/pages/stack/git.png",
+        imgPath: "/images/pages/stack/git.avif",
         level: 7.5,
       },
       {
         name: "CI/CD",
-        imgPath: "/images/pages/stack/ci_cd.png",
+        imgPath: "/images/pages/stack/ci_cd.avif",
         level: 3.5,
       },
       {
         name: "Docker",
-        imgPath: "/images/pages/stack/docker.png",
+        imgPath: "/images/pages/stack/docker.avif",
         level: 1.5,
       },
     ],

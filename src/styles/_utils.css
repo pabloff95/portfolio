@@ -46,3 +46,19 @@ button:has(> img.hover\:bg-primary-contrast):hover
 .img-shadow {
   filter: drop-shadow(0 0 5px var(--dark-secondary-background));
 }
+
+.rotate-y-animation {
+  animation: rotate-y-animation 1s;
+}
+
+@keyframes rotate-y-animation {
+  0% {
+    transform: rotatey(0deg);
+  }
+  50% {
+    transform: rotatey(90deg);
+  }
+  100% {
+    transform: rotatey(0deg);
+  }
+}

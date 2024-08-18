@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, MutableRefObject } from "react";
+import React, { useState, useRef, MutableRefObject } from "react";
 import FaIcon from "../../basic-components/Fa-icon";
 import ExternalLink from "../../basic-components/External-link";
 
@@ -9,9 +9,6 @@ export interface ProjectCardProps {
   imgAlt: string;
   longDescription: string;
   githubUrl?: string;
-  index: number;
-  setExpandedCard: Function;
-  expandedCard: null | number;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -21,141 +18,81 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   imgAlt,
   longDescription,
   githubUrl,
-  index,
-  setExpandedCard,
-  expandedCard,
 }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const cardRef: MutableRefObject<string> = useRef(title.split(" ").join("_"));
+  const [isOpened, setIsOpened] = useState(false);
+  const cardRef: MutableRefObject<HTMLInputElement | null> = useRef(null);
 
-  useEffect(() => {
-    // Scroll element into view, when the user expands the card
-    if (!isExpanded) {
-      return;
-    }
+  const openCard = () => {
+    cardRef?.current?.classList.remove("rotate-y-animation");
 
-    setExpandedCard(index);
+    setTimeout(() => {
+      cardRef?.current?.classList.add("rotate-y-animation");
+    }, 0);
 
-    const targetCard: HTMLElement | null = document.getElementById(
-      cardRef?.current
-    );
-
-    if (targetCard) {
-      // Use a small delay, otherwise sometimes the element is not fully rendered before scrolling, resulting in the element not being centered
-      setTimeout(() => {
-        targetCard.scrollIntoView({
-          behavior: "smooth",
-          block: "center",
-          inline: "center",
-        });
-      }, 100);
-    }
-  }, [isExpanded]);
-
-  useEffect(() => {
-    // Allow only 1 card to be expanded at the same time
-    if (expandedCard === null) {
-      return;
-    }
-
-    if (expandedCard !== index) {
-      setIsExpanded(false);
-    }
-  }, [expandedCard]);
+    setTimeout(() => {
+      setIsOpened(!isOpened);
+    }, 500); // Animation last 1s, it is rotated at the 50% -> after 0.5s the project card content is changed
+  };
 
   return (
-    <div className="px-[1vw]" id={cardRef.current}>
+    <div className="px-[1vw]">
       <div
-        className={`bg-secondary-background min-w-[300px] ${
-          isExpanded ? "w-[52vw] h-full" : "w-[25vw]"
-        } rounded-xl shadow-box-primary shadow-contrast-on-hover-child ease-in-out duration-200`}
+        className="bg-secondary-background min-w-[300px] w-[25vw] h-full rounded-lg shadow-box-primary shadow-contrast-on-hover-child"
+        ref={cardRef}
       >
-        {!isExpanded && (
-          <div className="p-6 flex flex-col gap-2 justify-center items-center text-center">
-            <div className="w-full">
-              <button
-                className="overflow-hidden w-full flex justify-center rounded-xl"
-                onClick={() => setIsExpanded(true)}
-                type="button"
-              >
+        <div className="h-[50vh] p-6 flex flex-col gap-2 justify-center items-center text-center">
+          <div className="flex flex-col w-full h-full">
+            <button
+              className="overflow-hidden w-full flex justify-center rounded-lg"
+              onClick={openCard}
+              type="button"
+            >
+              {!isOpened && (
                 <img
                   src={imgSrc}
                   alt={imgAlt}
-                  className="h-[30vh] min-w-full hover:scale-110 cursor-pointer hover:bg-primary-contrast ease-in-out duration-200"
+                  className="h-[30vh] min-w-full cursor-pointer hover:scale-110 hover:bg-primary-contrast ease-in-out duration-200"
                 />
-              </button>
-              <p className="mt-2 font-impact text-3xl w-full text-contrast-on-sibling-hover">
-                {title}
-              </p>
-              <p className="text-font-base text-start text-lg">
-                {shortDescription}
-              </p>
-              <button
-                className="mt-2 w-full text-xl py-2 bg-primary-dark rounded-xl font-bold text-font-base tracking-wider hover:bg-primary-contrast"
-                type="button"
-                onClick={() => setIsExpanded(true)}
-              >
-                <FaIcon
-                  icon="fa-magnifying-glass-plus"
-                  className="mr-2"
-                  iconColor="var(--text-color)"
-                  changeOnHover={false}
-                ></FaIcon>
-                Read more
-              </button>
+              )}
+            </button>
+            <p className="mt-2 font-impact text-3xl w-full text-contrast-on-sibling-hover">
+              {title}
+            </p>
+            <div className="grow text-font-base text-start text-lg">
+              {isOpened ? longDescription : shortDescription}
+              {isOpened && githubUrl && (
+                <ExternalLink url={githubUrl} showLinkClasses>
+                  <p className="mt-2">
+                    <FaIcon
+                      icon="fa-brands fa-github"
+                      className="mr-2"
+                      iconColor="var(--text-color)"
+                      changeOnHover={false}
+                    ></FaIcon>
+                    See in GitHub
+                  </p>
+                </ExternalLink>
+              )}
             </div>
+            <button
+              className="mt-2 w-full text-xl py-2 bg-primary-dark rounded-lg font-bold text-font-base tracking-wider hover:bg-primary-contrast"
+              type="button"
+              onClick={openCard}
+            >
+              <FaIcon
+                icon={
+                  isOpened
+                    ? "fa-magnifying-glass-minus"
+                    : "fa-magnifying-glass-plus"
+                }
+                className="mr-2"
+                iconColor="var(--text-color)"
+                changeOnHover={false}
+              ></FaIcon>
+              {isOpened ? "Read less" : "Read more"}
+            </button>
           </div>
-        )}
-        {isExpanded && (
-          <div className="p-6 flex flex-col gap-2 justify-between items-center text-center h-full">
-            <div className="grow flex flex-col justify-evenly">
-              <p className="font-impact text-3xl w-full text-contrast-on-sibling-hover">
-                {title}
-              </p>
-              <div className="mt-2 w-full flex text-font-base ">
-                <div className="w-1/2">
-                  <p className="text-start text-lg">{longDescription}</p>
-                  <br />
-                  {githubUrl && (
-                    <p className="text-start text-lg">
-                      See project{" "}
-                      <ExternalLink url={githubUrl} showLinkClasses>
-                        here
-                        <FaIcon
-                          icon="fa-brands fa-github"
-                          className="ml-2"
-                          changeOnHover={false}
-                        />
-                      </ExternalLink>
-                    </p>
-                  )}
-                </div>
-                <div className="w-1/2 flex justify-end">
-                  <img
-                    src={imgSrc}
-                    alt={imgAlt}
-                    className="w-[90%] h-auto rounded-xl"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="w-full flex justify-start mt-2">
-              <button
-                className="mt-2 w-fit text-xl py-2 px-6 bg-primary-dark rounded-xl font-bold text-font-base tracking-wider hover:bg-primary-contrast"
-                type="button"
-                onClick={() => setIsExpanded(false)}
-              >
-                <FaIcon
-                  icon="fa-magnifying-glass-minus"
-                  className="mr-2"
-                  iconColor="var(--text-color)"
-                  changeOnHover={false}
-                ></FaIcon>
-                Read less
-              </button>
-            </div>
-          </div>
-        )}
+        </div>
       </div>
     </div>
   );

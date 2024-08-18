@@ -2,11 +2,8 @@ import Section from "../components/basic-components/Section";
 import ProjectCard, {
   ProjectCardProps,
 } from "../components/pages/projects/Project-card";
-import { useState } from "react";
 
 export default function Projects() {
-  const [expandedCard, setExpandedCard] = useState<null | number>(null);
-
   const projectsData: ProjectCardProps[] = [
     {
       title: "The GuessGame",
@@ -67,12 +64,8 @@ export default function Projects() {
       imgAlt: "Snake Game project image",
       githubUrl: "https://github.com/pabloff95/Snake-Game",
     },
-  ].map((el, index) => ({
-    // Pass general props that are shared by all the objects
+  ].map((el) => ({
     ...el,
-    index,
-    expandedCard,
-    setExpandedCard: (value: number) => setExpandedCard(value),
   }));
 
   return (

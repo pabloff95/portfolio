@@ -36,7 +36,7 @@ export default function Layout() {
   };
 
   return (
-    <div className="h-[100vh] w-[100vw] grid grid-cols-12 overflow-hidden">
+    <div className="h-[100vh] w-[100vw] grid grid-rows-12 md:grid-cols-12 overflow-hidden">
       {displayMenu && (
         <SideMenu
           setDisplayMenu={setDisplayMenu}
@@ -45,8 +45,8 @@ export default function Layout() {
         />
       )}
       <main
-        className={`relative ${
-          displayMenu ? "col-span-10" : "col-span-12"
+        className={`h-[100vh] relative ${
+          displayMenu ? "col-span-11 md:col-span-10" : "col-span-12"
         } overflow-y-auto`}
       >
         {!displayMenu && (

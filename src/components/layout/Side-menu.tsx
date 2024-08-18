@@ -14,25 +14,25 @@ const SideMenu: React.FC<SideMenuProps> = ({
   displayDarkMode,
 }) => {
   return (
-    <aside className="h-[100vh] col-span-2 bg-secondary-background grid grid-rows-6">
-      <section className="row-span-1">
+    <aside className="row-span-1 md:col-span-2 grid grid-cols-6 md:grid-cols-1 md:grid-rows-6 md:h-[100vh] w-[100vw] md:w-auto bg-secondary-background">
+      <section className="hidden min-[580px]:block row-span-1">
         <div className="h-full font-impact text-2xl flex flex-col justify-center text-center">
           <Logo />
-          <p>Web developer</p>
+          <p className="hidden lg:block">Web developer</p>
         </div>
       </section>
-      <section className="row-span-4 flex flex-col gap justify-center items-center">
+      <section className="col-span-5 min-[580px]:col-span-4 md:row-span-4 flex md:flex-col gap justify-center items-center">
         <MenuButton to="/" text="HOME" />
         <MenuButton to="/about" text="ABOUT" />
         <MenuButton to="/stack" text="STACK" />
         <MenuButton to="/projects" text="PROJECTS" />
         <MenuButton to="/contact" text="CONTACT" />
       </section>
-      <section className="row-span-1 flex items-end">
+      <section className="row-span-1 flex items-center md:items-end">
         <div className="w-full p-4 flex justify-center text-lg gap-4">
           <button
             type="button"
-            className="h-1"
+            className="hidden md:block h-1"
             onClick={() => setDisplayMenu(false)}
           >
             <FaIcon icon="fa-compress" />

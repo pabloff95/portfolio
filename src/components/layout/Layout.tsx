@@ -45,9 +45,9 @@ export default function Layout() {
         />
       )}
       <main
-        className={`h-[100vh] relative ${
-          displayMenu ? "col-span-11 md:col-span-10" : "col-span-12"
-        } overflow-y-auto`}
+        className={`h-full md:h-[100vh] relative ${
+          displayMenu ? "row-span-12 md:col-span-10" : "col-span-12"
+        } overflow-y-auto overflow-x-hidden`}
       >
         {!displayMenu && (
           <div className="fixed right-2 w-fit p-4 text-lg flex justify-center gap-4">

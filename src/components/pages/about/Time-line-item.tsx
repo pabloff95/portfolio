@@ -38,7 +38,7 @@ const TimeLineItem: React.FC<TimeLineItemProps> = ({
 
   return (
     <li className="my-6 ml-6">
-      <div className="relative">
+      <div className="hidden lg:block relative">
         <p className="top-1 font-bold absolute text-end" style={dateStyle}>
           {dateRange}
         </p>
@@ -48,7 +48,8 @@ const TimeLineItem: React.FC<TimeLineItemProps> = ({
           <div className="flex">
             <div>
               <h1 className="text-2xl font-semibold">{title}</h1>
-              <p className="text-lg opacity-85">
+              <span className="lg:hidden text-lg opacity-85">{dateRange}</span>
+              <p className="text-lg lg:opacity-85">
                 {place}
                 {placeUrl && (
                   <ExternalLink url={placeUrl} className="ml-2">
@@ -95,8 +96,10 @@ const TimeLineItem: React.FC<TimeLineItemProps> = ({
             <div className="absolute w-5 h-5 border-4 border-font-base bg-primary-background rounded-full mt-1.5 -start-[0.75rem]"></div>
           </div>
           <p className="paragraph my-0">{shortText}</p>
+
           <p className="text-lg opacity-85">
-            {place} | {location}
+            {place} | {location}{" "}
+            <span className="lg:hidden text-lg opacity-85">| {dateRange}</span>
           </p>
         </>
       )}

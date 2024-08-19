@@ -3,14 +3,14 @@ export default function Home() {
     <>
       <section className="h-[100vh] w-full overflow-hidden">
         <div className="flex flex-col lg:flex-row h-full w-full justify-center items-center px-4">
-          <div className="mb-6 lg:mb-0 w-[70%] lg:w-[40vw] lg:hidden-animation lg:hidden-animation-left">
+          <div className="mb-6 lg:mb-0 w-[70%] lg:w-[40vw] hidden-animation hidden-animation-left">
             <img
               className="rounded-3xl m-auto"
               src="/images/profile.jpg"
               alt="Profile picture"
             />
           </div>
-          <div className="font-impact text-center w-full md:w-[60vw] flex flex-col gap-8 md:hidden-animation md:hidden-animation-right">
+          <div className="font-impact text-center w-full md:w-[60vw] flex flex-col gap-8 hidden-animation hidden-animation-right">
             <p className="text-3xl md:text-4xl xl:text-5xl leading-snug">
               Welcome! <br />I am Pablo, a{" "}
               <span className="text-primary">web developer</span> especiallized

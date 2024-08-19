@@ -147,7 +147,7 @@ export default function About() {
 
   return (
     <>
-      <Section title="About me">
+      <Section title="About me" animateLeft>
         <p className="paragraph">
           I grew up in the north of Spain, in Santander. But I have had the
           opportunity to live in various locations such as Barcelona (Spain),
@@ -176,8 +176,8 @@ export default function About() {
           projects, spending time with friends and family, reading and cooking.
         </p>
       </Section>
-      <Section title="Work experience">
-        <div className="text-end">
+      <Section title="Work experience" animateRight>
+        <div className="text-center md:text-end">
           <Switch
             boolValue={showItRelevantExperiencesOnly}
             onChange={() => {
@@ -186,7 +186,7 @@ export default function About() {
             label="Display only IT-relevant work experience"
           />
         </div>
-        <div className="my-5 py-5 mx-auto flex flex-col gap-6 w-2/3">
+        <div className="mb-5 py-5 mx-auto flex flex-col gap-6 w-full min-[500px]:w-11/12 md:w-2/3">
           <TimeLine
             events={workExperienceEvents.filter((event) => {
               if (showItRelevantExperiencesOnly) {
@@ -198,19 +198,19 @@ export default function About() {
           />
         </div>
       </Section>
-      <Section title="Academic background">
-        <div className="my-5 py-5 mx-auto flex flex-col gap-6 w-2/3">
+      <Section title="Academic background" animateLeft>
+        <div className="my-5 py-5 mx-auto flex flex-col gap-6 w-full min-[500px]:w-11/12 md:w-2/3">
           <TimeLine events={academicBackgroundEvents} />
         </div>
       </Section>
-      <Section title="Soft skills">
+      <Section title="Soft skills" animateRight>
         <p className="paragraph">
           I place a very high value on the soft skills I have developed
           throughout my career, because I believe that they contribute to a
           positive work environment and can enhance the productivity of a team.
           From all of them, I highlight the following:
         </p>
-        <div className="my-5 w-full flex justify-evenly items-center h-[10vh]">
+        <div className="my-5 w-full flex flex-wrap justify-evenly items-center gap-2 min-h-fit h-[10vh]">
           <SoftSkill title="Team Work" icon="fa-people-group" />
           <SoftSkill title="Critical Thinking" icon="fa-gears" />
           <SoftSkill title="Time Management" icon="fa-clock" />

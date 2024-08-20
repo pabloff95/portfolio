@@ -18,7 +18,7 @@ interface formData {
 }
 
 const CONTAINER_STYLES: string =
-  "w-5/6 h-fit m-auto bg-secondary-background px-4 py-16 flex flex-col gap-6 rounded-md border-b-4 border-b-primary";
+  "mt-12 lg:mt-auto min-w-[350px] w-5/6 h-fit m-auto bg-secondary-background px-4 py-16 flex flex-col gap-6 rounded-md border-b-4 border-b-primary";
 const BUTTON_STYLES: string =
   "bg-primary rounded-md text-xl text-secondary-background px-8 py-4 font-impact tracking-wider hover:bg-primary-contrast hover:border-primary-contrast";
 

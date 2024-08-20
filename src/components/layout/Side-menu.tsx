@@ -14,14 +14,14 @@ const SideMenu: React.FC<SideMenuProps> = ({
   displayDarkMode,
 }) => {
   return (
-    <aside className="row-span-1 md:col-span-2 grid grid-cols-6 md:grid-cols-1 md:grid-rows-6 md:h-[100vh] w-[100vw] md:w-auto bg-secondary-background">
+    <aside className="row-span-1 md:col-span-2 grid grid-cols-12 md:grid-cols-1 md:grid-rows-6 md:h-[100vh] w-[100vw] md:w-auto bg-secondary-background">
       <section className="hidden min-[580px]:block row-span-1">
         <div className="h-full font-impact text-2xl flex flex-col justify-center text-center">
           <Logo />
           <p className="hidden lg:block">Web developer</p>
         </div>
       </section>
-      <section className="col-span-5 min-[580px]:col-span-4 md:row-span-4 flex md:flex-col gap justify-center items-center">
+      <section className="col-span-11 min-[580px]:col-span-10 md:row-span-4 flex md:flex-col justify-center items-center">
         <MenuButton to="/" text="HOME" />
         <MenuButton to="/about" text="ABOUT" />
         <MenuButton to="/stack" text="STACK" />

@@ -62,11 +62,6 @@ const SKILLS: SkillsInterface = {
         imgPath: "/images/pages/stack/bootstrap.avif",
         level: 5,
       },
-      {
-        name: "Angular",
-        imgPath: "/images/pages/stack/angular.avif",
-        level: 1,
-      },
     ],
   },
   backEnd: {
@@ -156,44 +151,40 @@ export default function Stack() {
               selectedStack ? "items-start" : "w-full h-full  items-center"
             } flex flex-col justify-center gap-8 ease-in-out duration-5000`}
           >
-            <div className="font-impact text-6xl text-primary">
+            <div className="font-impact text-5xl sm:text-6xl text-primary text-center">
               Discover my Tech Stack!
             </div>
             {!selectedStack && (
               <p className="paragraph w-[80%]">
-                Here you will find the set of tools and technologies that I use
-                in my projects. Take a closer look at the resources I use to
-                develop dynamic, responsive and efficient web applications.
+                Here you can see the set of tools and technologies that I
+                normally use in my projects. Take a closer look at the resources
+                I use to develop dynamic, responsive and efficient web
+                applications!
               </p>
             )}
             <div
-              className={`w-full flex justify-center flex-row ${
+              className={`w-full flex justify-center flex-row flex-wrap ${
                 selectedStack ? "gap-8" : "gap-16"
               }`}
             >
-              <SkillButton
-                name={SKILLS.frontEnd.name}
-                icon={SKILLS.frontEnd.icon}
-                handleButtonClick={() => handleSelectStack(SKILLS.frontEnd)}
-                selectedStack={selectedStack}
-              />
-              <SkillButton
-                name={SKILLS.backEnd.name}
-                icon={SKILLS.backEnd.icon}
-                handleButtonClick={() => handleSelectStack(SKILLS.backEnd)}
-                selectedStack={selectedStack}
-              />
-              <SkillButton
-                name={SKILLS.other.name}
-                icon={SKILLS.other.icon}
-                handleButtonClick={() => handleSelectStack(SKILLS.other)}
-                selectedStack={selectedStack}
-              />
+              {["frontEnd", "backEnd", "other"].map(
+                (skillSet: string, index: number) => (
+                  <SkillButton
+                    name={SKILLS[skillSet].name}
+                    icon={SKILLS[skillSet].icon}
+                    handleButtonClick={() =>
+                      handleSelectStack(SKILLS[skillSet])
+                    }
+                    selectedStack={selectedStack}
+                    key={`skill-button-${index}`}
+                  />
+                )
+              )}
             </div>
           </div>
           <div>
             {selectedStack && (
-              <div className="my-12 m-auto w-[80%] lg:w-1/2 flex flex-wrap justify-center">
+              <div className="my-12 m-auto w-full lg:w-[80%] gap-x-8 lg:gap-x-0 flex flex-wrap justify-center">
                 {selectedStack.stack.map(({ name, imgPath, level }, index) => {
                   return (
                     <StackItem

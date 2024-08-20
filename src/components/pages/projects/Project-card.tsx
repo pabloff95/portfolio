@@ -39,7 +39,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div className="px-[1vw]">
       <div
-        className="bg-secondary-background min-w-[300px] w-[25vw] h-full rounded-lg shadow-box-primary shadow-contrast-on-hover-child"
+        className="bg-secondary-background min-w-[350px] w-[25vw] h-full rounded-lg shadow-box-primary shadow-contrast-on-hover-child"
         ref={cardRef}
       >
         <div className="min-h-[50vh] h-full p-6 flex flex-col gap-2 justify-center items-center text-center">

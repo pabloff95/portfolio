@@ -20,9 +20,9 @@ jobs:
         run: npm install
 
       - name: Build app
-        run: npm run build -- --base-href /gh-pages-portfolio/
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: "app/dist/gh-pages-portfolio/"
+          path: "app/dist/"

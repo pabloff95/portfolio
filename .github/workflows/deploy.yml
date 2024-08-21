@@ -11,10 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Initialise
-        run: echo "Preparing deploy files..."
+      - name: Use node v.20
+        uses: action/setup-node@v2
+        with:
+          node-version: '20'
 
-      - name: Build and deploy
-        run: |
-          docker compose up --build
-          git push origin HEAD:gh-pages --force
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build app
+        run: npm run build

@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Initialise
-        run: Preparing deploy files...
+        run: echo "Preparing deploy files..."
 
       - name: Build and deploy
         run: |

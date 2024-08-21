@@ -5,7 +5,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,4 +20,9 @@ jobs:
         run: npm install
 
       - name: Build app
-        run: npm run build
+        run: npm run build -- --base-href /gh-pages-portfolio/
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: "app/dist/gh-pages-portfolio/"

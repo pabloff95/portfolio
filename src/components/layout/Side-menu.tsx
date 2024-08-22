@@ -31,7 +31,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
         <MenuButton to="/contact" text="CONTACT" />
       </section>
       <section className="row-span-1 flex items-center md:items-end">
-        <div className="w-full p-4 flex justify-center text-xs sm:text-lg gap-4">
+        <div className="w-full sm:p-4 flex justify-center text-xs sm:text-lg gap-4">
           <button
             type="button"
             className="hidden md:block h-1"

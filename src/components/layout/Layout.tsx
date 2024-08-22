@@ -36,7 +36,7 @@ export default function Layout() {
   };
 
   return (
-    <div className="h-[100vh] w-[100vw] flex flex-col md:grid md:grid-cols-12 overflow-y-hidden">
+    <div className="h-[100vh] w-[100vw] flex flex-col md:grid md:grid-cols-12 overflow-hidden">
       {displayMenu && (
         <SideMenu
           setDisplayMenu={setDisplayMenu}

@@ -21,6 +21,10 @@ jobs:
 
       - name: Build app
         run: npm run build
+        env:
+          MAIL_SERVICE_ID:  ${{ secrets.MAIL_SERVICE_ID }}
+          MAIL_TEMPLATE_ID:  ${{ secrets.MAIL_TEMPLATE_ID }}
+          MAIL_PUBLIC_KEY:  ${{ secrets.MAIL_PUBLIC_KEY }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2

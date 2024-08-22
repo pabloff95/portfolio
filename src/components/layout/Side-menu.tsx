@@ -16,12 +16,14 @@ const SideMenu: React.FC<SideMenuProps> = ({
   return (
     <aside className="row-span-1 md:col-span-2 grid grid-cols-12 md:grid-cols-1 md:grid-rows-6 md:h-[100vh] w-[100vw] md:w-auto bg-secondary-background">
       <section className="hidden min-[580px]:block row-span-1">
-        <div className="h-full font-impact text-2xl flex flex-col justify-center text-center">
+        <div className="h-full font-impact flex flex-col md:justify-center text-center">
           <Logo />
-          <p className="hidden lg:block">Web developer</p>
+          <p className="hidden lg:block text-[min(2vmax,1.35rem)]">
+            Web developer
+          </p>
         </div>
       </section>
-      <section className="col-span-11 min-[580px]:col-span-10 md:row-span-4 flex md:flex-col justify-center items-center">
+      <section className="col-span-11 min-[580px]:col-span-10 md:row-span-4 flex md:flex-col justify-between sm:justify-center items-center">
         <MenuButton to="/" text="HOME" />
         <MenuButton to="/about" text="ABOUT" />
         <MenuButton to="/stack" text="STACK" />
@@ -29,7 +31,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
         <MenuButton to="/contact" text="CONTACT" />
       </section>
       <section className="row-span-1 flex items-center md:items-end">
-        <div className="w-full p-4 flex justify-center text-lg gap-4">
+        <div className="w-full p-4 flex justify-center text-xs sm:text-lg gap-4">
           <button
             type="button"
             className="hidden md:block h-1"

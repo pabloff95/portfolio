@@ -49,6 +49,11 @@ export default function Layout() {
           displayMenu ? "row-span-12 md:col-span-10" : "col-span-12"
         } overflow-y-auto overflow-x-hidden`}
       >
+        <SideMenu
+          setDisplayMenu={setDisplayMenu}
+          darkModeHandler={darkModeHandler}
+          displayDarkMode={displayDarkMode}
+        />
         {!displayMenu && (
           <div className="fixed right-2 w-fit p-4 text-lg flex justify-center gap-4">
             <button

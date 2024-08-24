@@ -1,24 +1,32 @@
 import { useEffect, useState } from "react";
 
+interface dimensionsInterface {
+  screenWidth: number;
+  screenHeight: number;
+  buttonWidth: number;
+  buttonHeight: number;
+  asideWidth: number;
+  asideHeight: number;
+}
+
 export default function Home() {
-  const [dimensions, setDimesions] = useState(null);
+  const [dimensions, setDimesions] = useState<dimensionsInterface | null>(null);
 
   useEffect(() => {
     const buttons =
       document.getElementsByClassName("menu-button").length > 0
         ? Array.from(document.getElementsByClassName("menu-button"))
         : [];
+    const aside = document.querySelector("aside");
 
-    if (buttons.length > 0) {
+    if (buttons.length > 0 && aside) {
       setDimesions({
         screenWidth: window.innerWidth,
         screenHeight: window.window.innerHeight,
         buttonWidth: buttons[0].getBoundingClientRect().width,
         buttonHeight: buttons[0].getBoundingClientRect().height,
-        asideWidth: document.querySelector("aside")?.getBoundingClientRect()
-          .width,
-        asideHeight: document.querySelector("aside")?.getBoundingClientRect()
-          .height,
+        asideWidth: aside.getBoundingClientRect().width,
+        asideHeight: aside.getBoundingClientRect().height,
       });
 
       console.log({ dimensions });

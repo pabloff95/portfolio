@@ -27,7 +27,7 @@
 @media (width < 450px) {
   .menu-button {
     width: fit-content;
-    font-size: 3vw;
+    font-size: 0.75rem;
     text-align: left;
     padding: 0 1rem 0 0;
     background: var(--secondary-background);

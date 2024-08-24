@@ -27,7 +27,7 @@ jobs:
           MAIL_PUBLIC_KEY: ${{ secrets.MAIL_PUBLIC_KEY }}
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           path: "dist/"
 

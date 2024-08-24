@@ -13,8 +13,8 @@ export default function Home() {
           <div className="font-impact text-center w-full md:w-[60vw] flex flex-col gap-8 hidden-animation hidden-animation-right">
             <p className="text-3xl md:text-4xl xl:text-5xl leading-snug">
               Welcome! <br />I am Pablo, a{" "}
-              <span className="text-primary">web developer</span> especiallized
-              in <span className="text-primary">frontend</span>
+              <span className="text-primary">web developer</span> specialised in{" "}
+              <span className="text-primary">front end</span>
             </p>
             <div className="m-auto w-[80%] bg-font-base h-1 rounded-lg"></div>
             <div className="mt-2 flex flex-row gap-4 2xl:gap-12 w-full justify-center">
@@ -28,7 +28,7 @@ export default function Home() {
                 <span>User Experience</span>
               </div>
               <div className="hidden xl:flex py-1 lg:py-2 2xl:py-3 px-2 lg:px-4 2xl:px-6 border-2 border-font-base lg:text-md 2xl:text-lg rounded-md items-center justify-center">
-                <span>Fullstack</span>
+                <span>Full-Stack</span>
               </div>
             </div>
           </div>

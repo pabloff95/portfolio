@@ -27,16 +27,17 @@ export default function Projects() {
     {
       title: "The GuessGame",
       shortDescription:
-        'Adaptation of the boardgame "Mastermind" with a online players score tracker',
+        'Adaptation of the boardgame "Mastermind" with an online players score tracker',
       longDescription:
-        'The GuessGame is an online version of the boardgame "Mastermind". The app allows the user to play as a registered user. Then, at the end of each game the user score is saved and used to keep track of his games and to create a global rank of all the players.</br></br> This application was built using using native JavaScript and using PHP and MySQL in the backend.',
+        'The GuessGame is an online version of the boardgame "Mastermind". The app allows the user to play as a registered user. Then, at the end of each game the user score is saved and used to keep track of his games and to create a global rank of all the players.</br></br> This application was built using using native JavaScript and with PHP and MySQL in the back end.',
       imgSrc: "images/pages/projects/guessgame.jpg",
       imgAlt: "The GuessGame project board view",
       githubUrl: "https://github.com/pabloff95/The-GuessGame",
     },
     {
       title: "Weather App",
-      shortDescription: "Weather application to see the forecast of any town",
+      shortDescription:
+        "Simple weather application to consult the forecast of any town",
       longDescription:
         "This project allows the user to check the wheather information of any town, using the OpenWeather Map API.</br></br> This application was developed using native JavaScript.",
       imgSrc: "images/pages/projects/weather-app.jpg",
@@ -48,7 +49,7 @@ export default function Projects() {
       shortDescription:
         "Finance app to record expenses, income and investments and keep track of their evolution",
       longDescription:
-        "Application that allows to monitore expenses, income and investments. The user can perform any CRUD operation with their data. Furthermore, the user can see an overview of the finances.</br></br> This application was built using using native JavaScript - with CanvasJS for the charts - and with PHP and MySQL in the backend.",
+        "Application that allows to monitore expenses, income and investments. The user can perform any CRUD operation with their data. Furthermore, the user can see an overview of the finances.</br></br> This application was built using using native JavaScript - with CanvasJS for the charts - and with PHP and MySQL in the back end.",
       imgSrc: "images/pages/projects/finance-manager.jpg",
       imgAlt: "Finances Manager project image",
       githubUrl: "https://github.com/pabloff95/Finance-Manager",

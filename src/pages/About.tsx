@@ -15,9 +15,9 @@ export default function About() {
       placeUrl: "https://dataahead.de/",
       location: "Nürnberg | Germany",
       shortText:
-        "Full-Stack Developer focused primarily on Front-End development (80% Front-End, 20% Back-End). My role involves contributing to the development and maintenance of two key company products: Process Hawk and Xitavis.",
+        "Full stack developer focused primarily on the front end (80% front end, 20% back end). My role involves contributing to the development and maintenance of two key company products: Process Hawk and Xitavis.",
       longText:
-        'As a Full-Stack Developer at Data Ahead (80% Front-End, 20% Back-End), my role centers on contributing to the development and maintenance of two key company products: Process Hawk and Xitavis. I use a diverse tech stack, including Ember JS, Node JS, GraphQL, MongoDB, Tailwind, Bootstrap, Python, Docker, and Git.<br /><br />My responsibilities encompass a wide range of tasks such as: <ul class="list-disc pl-6"><li>Fix bugs and performance problems.</li><li>Concept, design, plan and testing of new features and further development of the existing functionalities.</li><li>Update dependencies.</li><li>Code reviews.</li><li>Mentor front end developers and onboarding of new team members.</li><li>Participate in technical interviews of new candidates.</li><li>Collaboration with the sales team and management to ensure alignment on project goals and deliverables.</li></ul>',
+        'As a full stack developer (80% front end, 20% back end) at Data Ahead, my role centers on contributing to the development and maintenance of two key company products: Process Hawk and Xitavis. I use a diverse tech stack, including: Ember JS, Node JS, GraphQL, MongoDB, Tailwind, Bootstrap, Python, Docker, and Git.<br /><br />My responsibilities encompass a wide range of tasks such as: <ul class="list-disc pl-6"><li>Fix bugs and performance problems.</li><li>Concept, design, plan and testing of new features and further development of the existing functionalities.</li><li>Update dependencies.</li><li>Code reviews.</li><li>Mentor front end developers and onboarding of new team members.</li><li>Participate in technical interviews of new candidates.</li><li>Collaboration with the sales team and management to ensure alignment on project goals and deliverables.</li></ul>',
       isItRelevant: true,
     },
     {
@@ -54,9 +54,9 @@ export default function About() {
       placeUrl: "https://www.ugent.be/bw/environment/en/research/fornalab",
       location: "Ghent | Belgium",
       shortText:
-        "Research on the impacts of global warming on forest understorey plants using Integral Projection Models (IPMs) in R. ",
+        "Research on the impacts of global warming on forest understorey plants using Integral Projection Models (IPMs). ",
       longText:
-        "During the development of my master's thesis, I joined the Forest & Nature Lab research group, where I worked with Integral Projection Models (IPMs) using R to model the impacts of global warming on forest understorey plant populations. As a result of my work, I authored a research paper that was published, highlighting the findings and contributions of my research (see link bellow).<br /><br />In addition to my modeling work, I participated in fieldwork for various experiments, which included tasks such as collecting soil samples, measuring specific plant traits, and trimming tree branches.",
+        'During the development of my master\'s thesis, I joined the Forest & Nature Lab research group, where I worked with Integral Projection Models (IPMs) using R to model the impacts of global warming on forest understorey plant populations. As a result of my work, I authored a research paper that was published, highlighting the findings and contributions of my research (see <a  href=\'https://onlinelibrary.wiley.com/doi/10.1111/plb.13418\' class="underline text-primary-dark hover:text-primary-contrast w-fit" target="_blank" >here</a>).<br /><br />In addition to my modeling work, I participated in fieldwork for various experiments, which included tasks such as collecting soil samples, measuring specific plant traits, and trimming tree branches.',
       isItRelevant: true,
     },
     {
@@ -67,9 +67,9 @@ export default function About() {
       placeUrl: "https://www.wildfutures.org/",
       location: "Looe | England",
       shortText:
-        "Erasmus+ internship focused on captive primates (barbary macaques, woolly monkey) care and research.",
+        "Erasmus+ internship focused on captive primates (Barbary macaques, Woolly monkeys and Capuchin monkeys) care and research.",
       longText:
-        'Erasmus + Grant: One year long intership in the Wild Future´s Monkey Sanctuary in Cornwall, England. The project consists of learning the skills for the animal care in captivity and taking part within the research department of the centre. Work developed:<ul class="list-disc pl-6"><li>Full training in Barbary Macaque (Macaca sylvanus) care.</li><li>Full training in Woolly Monkey (Lagothrix sp.) care.</li><li>Data collect (with Zoo Monitor) and analysis (with Microsoft Excel).</li><li>Giving informative talks to the visitors.</li><li>Construction of new enviromental enrichment items.</li><li>Basic training in Capuchin monkeys (Cebus sp. and Sapajus sp.) care and ecology.</li></ul>',
+        'Erasmus + Grant: one year long intership at the Wild Future´s Monkey Sanctuary in Cornwall. The project consisted of learning the skills for the animal care in captivity and taking part within the research department of the centre. Work developed:<ul class="list-disc pl-6"><li>Full training in Barbary Macaque (Macaca sylvanus) care.</li><li>Full training in Woolly Monkey (Lagothrix sp.) care.</li><li>Data collect (with Zoo Monitor) and analysis (with Microsoft Excel).</li><li>Giving informative talks to the visitors.</li><li>Construction of new enviromental enrichment items.</li><li>Basic training in Capuchin monkeys (Cebus sp. and Sapajus sp.) care and ecology.</li></ul>',
       isItRelevant: false,
     },
     {
@@ -105,9 +105,9 @@ export default function About() {
       placeUrl: "https://fundacionmona.org/",
       location: "Girona | Spain",
       shortText:
-        "Internship as primate caregiver of chimpanzees and barbary macaques.",
+        "Internship as primate caregiver of chimpanzees and Barbary macaques.",
       longText:
-        "During my internship as a primate caregiver, my responsibilities included preparing diets, cleaning enclosures, developing environmental enrichment activities and performing various maintenance tasks.",
+        "During my internship as a primate caregiver my responsibilities included preparing diets, cleaning enclosures, developing environmental enrichment activities and performing various maintenance tasks.",
       isItRelevant: false,
     },
   ];
@@ -151,29 +151,31 @@ export default function About() {
         <p className="paragraph">
           I grew up in the north of Spain, in Santander. But I have had the
           opportunity to live in various locations such as Barcelona (Spain),
-          Gerona (Spain), Looe (UK), Ghent (Belgium) and Salem (Germany). Now, I
-          am based in Nürnberg (Germany). Each of these places has allowed me to
-          learn from diverse cultures and meet incredible people. Because of it
-          I can speak English, Spanish, and German
+          Gerona (Spain), Looe (UK), Ghent (Belgium) and Salem (Germany). Each
+          of these places allowed me to learn from diverse cultures and meet
+          incredible people.
         </p>
         <p className="paragraph">
-          During my undergraduate studies, I commuted daily approximately four
-          hours between Barcelona and Gerona, but I used this time for studying
-          and for working in my projects. This determination, combined with my
-          curiosity, has brought me to learn from a variety of subjects
-          including software development, data analysis, economics, ecology, and
-          genetics. I am always eager to continue learning and improving.
+          My curiosity has brought me to learn from a variety of subjects such
+          as software engineering, data analysis, economics, ecology or
+          genetics. I am always eager to continue learning and discovering new
+          passions! This, I believe, has given me a unique perspective and
+          adaptability in the fast-paced world of tech.
         </p>
         <p className="paragraph">
-          In addition to my studies, I am also passionate about new experiences
-          and challenges. This led me to participate in an Erasmus volunteer
-          project, where I lived in a caravan for a year in the UK. I believe
-          volunteering is an excellent way to grow as an individual and make a
-          positive impact in the world.
+          My journey into tech was a bit unconventional, since I originally
+          studied Biology. It was during my master studies that I became
+          increasingly interested in programming, which led me to pursue a
+          two-year apprenticeship in Web Applications Development. But in
+          addition to my studies, I am also passionate about new experiences and
+          challenges. This, for example, led me to participate in an Erasmus
+          volunteer project in the UK, where I worked as primate caregiver for a
+          year.
         </p>
         <p className="paragraph">
-          In my free time I enjoy staying active through sports, coding personal
-          projects, spending time with friends and family, reading and cooking.
+          Now, I am based in Nürnberg (Germany), where I am working as a Full
+          Stack developer. Below, you can read more about my academic and
+          professional background.
         </p>
       </Section>
       <Section title="Work experience" animateRight>
@@ -205,10 +207,10 @@ export default function About() {
       </Section>
       <Section title="Soft skills" animateRight>
         <p className="paragraph">
-          I place a very high value on the soft skills I have developed
-          throughout my career, because I believe that they contribute to a
-          positive work environment and can enhance the productivity of a team.
-          From all of them, I highlight the following:
+          I place a very high value on the soft skills I have developed during
+          my career, because I believe that they contribute to a positive work
+          environment and help me to increase my productivity. From all of them,
+          I highlight the following:
         </p>
         <div className="my-5 w-full flex flex-wrap justify-evenly items-center gap-2 min-h-fit h-[10vh]">
           <SoftSkill title="Team Work" icon="fa-people-group" />

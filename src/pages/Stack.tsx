@@ -81,7 +81,7 @@ const SKILLS: SkillsInterface = {
       {
         name: "Python",
         imgPath: "images/pages/stack/python.avif",
-        level: 4.0,
+        level: 3.5,
       },
       {
         name: "Flask",
@@ -89,13 +89,13 @@ const SKILLS: SkillsInterface = {
         level: 3.5,
       },
       {
-        name: "MongoDB",
-        imgPath: "images/pages/stack/mongo_db.avif",
-        level: 2.5,
-      },
-      {
         name: "PHP",
         imgPath: "images/pages/stack/php.avif",
+        level: 3.5,
+      },
+      {
+        name: "MongoDB",
+        imgPath: "images/pages/stack/mongo_db.avif",
         level: 2.5,
       },
       {
@@ -117,12 +117,12 @@ const SKILLS: SkillsInterface = {
       {
         name: "Git",
         imgPath: "images/pages/stack/git.avif",
-        level: 7.5,
+        level: 8,
       },
       {
         name: "CI/CD",
         imgPath: "images/pages/stack/ci_cd.avif",
-        level: 3.5,
+        level: 3,
       },
       {
         name: "Docker",
@@ -156,10 +156,8 @@ export default function Stack() {
             </div>
             {!selectedStack && (
               <p className="paragraph w-[80%]">
-                Here you can see the set of tools and technologies that I
-                normally use in my projects. Take a closer look at the resources
-                I use to develop dynamic, responsive and efficient web
-                applications!
+                Here you can take a closer look at the resources I use to
+                develop dynamic, responsive and efficient web applications!
               </p>
             )}
             <div

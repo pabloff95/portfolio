@@ -17,7 +17,7 @@ export default function Contact() {
                 I'm always excited to connect with fellow developers, potential
                 collaborators, and anyone interested in my work. Whether you
                 have a question, need some advice, or just want to network,
-                don't hesitate to drop me a message.
+                don't hesitate to write me a message!
               </p>
               <section className="mt-12 flex flex-col gap-8 w-full items-center">
                 <div className="flex gap-4 w-full h-full items-center">

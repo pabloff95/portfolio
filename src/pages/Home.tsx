@@ -1,7 +1,43 @@
+import { useEffect, useState } from "react";
+
 export default function Home() {
+  const [dimensions, setDimesions] = useState(null);
+
+  useEffect(() => {
+    const buttons =
+      document.getElementsByClassName("menu-button").length > 0
+        ? Array.from(document.getElementsByClassName("menu-button"))
+        : [];
+
+    if (buttons.length > 0) {
+      setDimesions({
+        screenWidth: window.innerWidth,
+        screenHeight: window.window.innerHeight,
+        buttonWidth: buttons[0].getBoundingClientRect().width,
+        buttonHeight: buttons[0].getBoundingClientRect().height,
+        asideWidth: document.querySelector("aside")?.getBoundingClientRect()
+          .width,
+        asideHeight: document.querySelector("aside")?.getBoundingClientRect()
+          .height,
+      });
+
+      console.log({ dimensions });
+    }
+  }, [document.getElementsByClassName("menu-button").length]);
+
   return (
     <>
       <section className="h-[100vh] w-full overflow-hidden">
+        {dimensions && (
+          <>
+            <p>screenWidth: {dimensions?.screenWidth}</p>
+            <p>screenHeight: {dimensions?.screenHeight}</p>
+            <p>buttonWidth: {dimensions?.buttonWidth}</p>
+            <p>buttonHeight: {dimensions?.buttonHeight}</p>
+            <p>asideWidth: {dimensions?.asideWidth}</p>
+            <p>asideHeight: {dimensions?.asideHeight}</p>
+          </>
+        )}
         <div className="flex flex-col lg:flex-row h-full w-full justify-center items-center px-4">
           <div className="mb-6 lg:mb-0 w-[70%] lg:w-[40vw] hidden-animation hidden-animation-left">
             <img

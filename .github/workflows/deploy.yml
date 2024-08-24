@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ["master"]
 
 jobs:
   app-build:
@@ -14,7 +14,7 @@ jobs:
       - name: Use node v.20
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Install dependencies
         run: npm install
@@ -22,12 +22,12 @@ jobs:
       - name: Build app
         run: npm run build
         env:
-          MAIL_SERVICE_ID:  ${{ secrets.MAIL_SERVICE_ID }}
-          MAIL_TEMPLATE_ID:  ${{ secrets.MAIL_TEMPLATE_ID }}
-          MAIL_PUBLIC_KEY:  ${{ secrets.MAIL_PUBLIC_KEY }}
+          MAIL_SERVICE_ID: ${{ secrets.MAIL_SERVICE_ID }}
+          MAIL_TEMPLATE_ID: ${{ secrets.MAIL_TEMPLATE_ID }}
+          MAIL_PUBLIC_KEY: ${{ secrets.MAIL_PUBLIC_KEY }}
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v4
         with:
           path: "dist/"
 
@@ -43,4 +43,4 @@ jobs:
     steps:
       - name: Deploy to Github pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v3

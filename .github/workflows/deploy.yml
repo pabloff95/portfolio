@@ -1,4 +1,4 @@
-name: CI
+name: Auto-deploy
 
 on:
   workflow_run: # Trigger deploy workflow after push to the master branch, when the lint job is completed

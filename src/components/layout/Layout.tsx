@@ -20,10 +20,10 @@ export default function Layout() {
       });
 
     const hiddenDomElements: Element[] = Array.from(
-      document.getElementsByClassName("hidden-animation")
+      document.getElementsByClassName("hidden-animation"),
     );
     hiddenDomElements.forEach((element) =>
-      elmentInViewPortObserver.observe(element)
+      elmentInViewPortObserver.observe(element),
     );
   }, [location]);
 

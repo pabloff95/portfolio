@@ -135,7 +135,7 @@ const SKILLS: SkillsInterface = {
 
 export default function Stack() {
   const [selectedStack, setSelectedStack] = useState<StackInterface | null>(
-    null
+    null,
   );
 
   const handleSelectStack: (stack: StackInterface) => void = (stack) => {
@@ -176,7 +176,7 @@ export default function Stack() {
                     selectedStack={selectedStack}
                     key={`skill-button-${index}`}
                   />
-                )
+                ),
               )}
             </div>
           </div>

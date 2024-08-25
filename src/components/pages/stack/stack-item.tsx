@@ -53,8 +53,8 @@ const StackItem: React.FC<StackItemPropsInterface> = ({ src, name, level }) => {
     level >= LEVEL_PALETTE.goodLevel.limit
       ? LEVEL_PALETTE.goodLevel.color
       : level >= LEVEL_PALETTE.mediumLevel.limit
-      ? LEVEL_PALETTE.mediumLevel.color
-      : "#ff7400"; // Low level default color
+        ? LEVEL_PALETTE.mediumLevel.color
+        : "#ff7400"; // Low level default color
 
   return (
     <div className="basis-1/3 xl:basis-1/4 my-4">

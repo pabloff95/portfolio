@@ -5,6 +5,7 @@ import pluginReact from "eslint-plugin-react";
 import { FlatCompat } from "@eslint/eslintrc";
 import path from "path";
 import { fileURLToPath } from "url";
+import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 
 // mimic CommonJS variables -- not needed if using CommonJS
 const __filename = fileURLToPath(import.meta.url);
@@ -20,6 +21,7 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
+  eslintPluginPrettierRecommended,
   {
     settings: {
       react: {

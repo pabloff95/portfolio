@@ -38,7 +38,7 @@ const ContactForm: React.FC = () => {
 
   const [formState, dispatch] = useReducer(
     formMachineReducer,
-    FormState.Initial
+    FormState.Initial,
   );
 
   useEffect(() => {
@@ -55,7 +55,7 @@ const ContactForm: React.FC = () => {
 
   // ---- HANDLE FUNCTIONS ----
   const handleFormInput = (
-    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     event.preventDefault();
 
@@ -75,7 +75,7 @@ const ContactForm: React.FC = () => {
   };
 
   const handleFieldGainedFocus = (
-    event: FocusEvent<HTMLInputElement | HTMLTextAreaElement>
+    event: FocusEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     event.preventDefault();
 
@@ -111,7 +111,7 @@ const ContactForm: React.FC = () => {
         process.env.MAIL_SERVICE_ID || "",
         process.env.MAIL_TEMPLATE_ID || "",
         form.current,
-        process.env.MAIL_PUBLIC_KEY || ""
+        process.env.MAIL_PUBLIC_KEY || "",
       )
       .then(
         () => {
@@ -120,7 +120,7 @@ const ContactForm: React.FC = () => {
         (error) => {
           console.log(error.text);
           dispatch(FormEvent.Fail);
-        }
+        },
       );
   };
 

@@ -1,4 +1,5 @@
 import TimeLineItem, { TimeLineItemProps } from "./Time-line-item";
+import React from "react";
 
 interface TimeLineProps {
   events: TimeLineItemProps[];

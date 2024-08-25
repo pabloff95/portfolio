@@ -1,6 +1,7 @@
 import MenuButton from "./Menu-button";
 import FaIcon from "../basic-components/Fa-icon";
 import Logo from "../basic-components/Logo";
+import React from "react";
 
 interface SideMenuProps {
   setDisplayMenu: React.Dispatch<React.SetStateAction<boolean>>;

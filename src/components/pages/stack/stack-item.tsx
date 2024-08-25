@@ -3,6 +3,7 @@ import {
   CircularProgressbarWithChildren,
 } from "react-circular-progressbar";
 import { useState, useEffect } from "react";
+import React from "react";
 
 interface StackItemPropsInterface {
   src: string;
@@ -19,6 +20,7 @@ interface levelPaletteInterface {
 
 interface ProgressProviderPropsInterface {
   endValue: number;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   children: any;
 }
 

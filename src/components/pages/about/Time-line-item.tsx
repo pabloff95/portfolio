@@ -1,6 +1,7 @@
 import { useState } from "react";
 import FaIcon from "../../basic-components/Fa-icon";
 import ExternalLink from "../../basic-components/External-link";
+import React from "react";
 
 export interface TimeLineItemProps {
   title: string;

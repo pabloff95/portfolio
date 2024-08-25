@@ -34,7 +34,7 @@ const ContactForm: React.FC = () => {
   const [textAreaRows, setTextAreaRows] = useState<number>(1);
   const [focusedField, setFocusedField] = useState<string>("");
   const [invalidFields, setInvalidFields] = useState<string[]>([]);
-  const form: any = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
   const [formState, dispatch] = useReducer(
     formMachineReducer,
@@ -101,7 +101,7 @@ const ContactForm: React.FC = () => {
 
     setInvalidFields(newInvalidFields);
 
-    if (newInvalidFields.length > 0) {
+    if (newInvalidFields.length > 0 || !form.current) {
       return;
     }
     dispatch(FormEvent.Submit);

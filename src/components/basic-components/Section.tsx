@@ -1,13 +1,13 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import SectionTitle from "./Section-title";
 
 interface SectionProps {
   title?: string;
-  children: any;
+  children: ReactNode;
   fullHeight?: boolean;
   hideTittle?: boolean;
-  animateLeft?: Boolean;
-  animateRight?: Boolean;
+  animateLeft?: boolean;
+  animateRight?: boolean;
 }
 
 const Section: React.FC<SectionProps> = ({

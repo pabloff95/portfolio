@@ -10,14 +10,14 @@ export default function Contact() {
         <div className="py-6 grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 h-full">
           <section className="h-fit m-auto">
             <header className="font-impact text-5xl sm:text-6xl text-primary">
-              Let's get in touch!
+              Let&apos;s get in touch!
             </header>
             <main>
               <p className="paragraph">
-                I'm always excited to connect with fellow developers, potential
-                collaborators, and anyone interested in my work. Whether you
-                have a question, need some advice, or just want to network,
-                don't hesitate to write me a message!
+                I&apos;m always excited to connect with fellow developers,
+                potential collaborators, and anyone interested in my work.
+                Whether you have a question, need some advice, or just want to
+                network, don&apos;t hesitate to write me a message!
               </p>
               <section className="mt-12 flex flex-col gap-8 w-full items-center">
                 <div className="flex gap-4 w-full h-full items-center">

@@ -1,10 +1,11 @@
 import FaIcon from "../../basic-components/Fa-icon";
 import { StackInterface } from "../../../pages/Stack";
+import React from "react";
 
 interface SkillButtonProps {
   name: string;
   icon: string;
-  handleButtonClick: any;
+  handleButtonClick: () => void;
   selectedStack: StackInterface | null;
 }
 

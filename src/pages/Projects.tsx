@@ -15,6 +15,15 @@ export default function Projects() {
       githubUrl: "https://github.com/pabloff95/garage",
     },
     {
+      title: "Carbon Footprint Display",
+      shortDescription: "Chart display for large datasets",
+      longDescription:
+        "This simple full-stack application is optimized to display large datasets (in the example carbon footprint measurements) using Highcharts.</br></br>The project was developed with Next JS, using a NestJS API that connects to the Postgres database using Prisma.",
+      imgSrc: "images/pages/projects/carbon-footprint-display.jpg",
+      imgAlt: "Example of a chart with CO2 data",
+      githubUrl: "https://github.com/pabloff95/Carbon-footprint-display",
+    },
+    {
       title: "Metadata Manager",
       shortDescription:
         "Web-application to read and update the metadata of any file",

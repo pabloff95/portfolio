@@ -75,7 +75,7 @@ export default function About() {
     {
       title: "Research assistant",
       from: "03/2018",
-      to: "06/2019",
+      to: "06/2018",
       place: "CREAF",
       placeUrl: "https://www.creaf.cat",
       location: "Barcelona | Spain",
